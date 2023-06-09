@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Action
+Name=Print File
+Name[ca]=Imprimeix fitxer
+Name[es]=Imprimir archivo
+Name[fr]=Imprimer Fichier
+Name[it]=Stampa file
+Name[ja]=ファイルを印刷
+Name[nl]=Bestand afdrukken
+Name[pt_BR]=Imprimir arquivo
+Name[pt_PT]=Imprimir Ficheiro
+Name[sv]=Skriv ut filen
+Profiles=on_file;
+Icon=document-print
+
+[X-Action-Profile on_file]
+MimeTypes=!inode/directory;*;
+Exec=lp %f
+SelectionCount==1

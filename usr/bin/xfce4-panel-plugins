@@ -1,0 +1,132 @@
+#!/bin/bash
+
+# Automate installation of xfce4-panel plugins
+
+# Seconds to wait for xfce4-panel
+WAIT=30
+# Plugin name where new plugins are placed in front of
+PLUGINBEFORE='clock'
+# State file paths
+PWRSTATE="$HOME/.config/xfce4/panel/xfce4-panel-plugins-pwrstate"
+XKBSTATE="$HOME/.config/xfce4/panel/xfce4-panel-plugins-xkbstate"
+# Log file
+LOG="$HOME/.config/xfce4/panel/xfce4-panel-plugins.log"
+
+function usage() {
+    printf "
+Auto install plugins for xfce4-panel
+Usage: xfce4-panel-plugins [OPTIONS]
+
+-f                     Force check and install if needed.
+-h                     Show help
+"
+}
+
+while getopts 'fh' OPT; do
+    case $OPT in
+        f)
+            rm -v "$HOME/.config/xfce4/panel/xfce4-panel-plugins"* 2>/dev/null
+            ;;
+        h)
+            usage
+            exit 0
+            ;;
+        *)
+            usage
+            exit 1
+            ;;
+    esac
+done
+
+# Wait until xfce4-panel is loaded
+if [ ! -e "$PWRSTATE" ] || [ ! -e "$XKBSTATE" ]; then
+    PID=$(pidof xfce4-panel)
+    echo "Wait for xfce4-panel (max: $WAIT seconds) | pid=$PID" > "$LOG"
+    until [ ! -z "$PID" ]; do
+        sleep 1
+        I=$((I+1))
+        echo "    $I sec | pid=$PID" | tee -a  "$LOG"
+        if [ $I -ge $WAIT ]; then
+            # Enough waiting
+            exit 1
+        fi
+        PID=$(pidof xfce4-panel)
+    done
+    # For some reason we still have to wait a bit
+    sleep 10
+fi
+
+# Add power-manager-plugin
+if [ ! -e "$PWRSTATE" ]; then
+    HASBAT=$(ls /sys/class/power_supply | grep BAT)
+    if [ ! -z "$HASBAT" ]; then
+        echo 'Add power-manager-plugin' | tee -a "$LOG"
+        xfce4-panel --add power-manager-plugin
+        # Up the counter
+        NRADDED=$(( NRADDED + 1 ))
+    fi
+    # Save state file
+    touch "$PWRSTATE"
+fi
+
+# Add xkb plugin
+if [ ! -e "$XKBSTATE" ]; then
+    XKBS=$(grep XKBLAYOUT= /etc/default/keyboard | grep ',')
+    if [ ! -z "$XKBS" ]; then
+        echo 'Add xkb plugin' | tee -a "$LOG"
+        xfce4-panel --add xkb
+        sleep 1
+        PLUGIN=$(xfconf-query -c xfce4-panel -l -v | grep xkb | awk '{print $1}')
+        if [ -z "$PLUGIN" ]; then
+            xfce4-panel --add=xkb-plugin
+            sleep 1
+            PLUGIN=$(xfconf-query -c xfce4-panel -l -v | grep xkb | awk '{print $1}')
+        fi
+        # List all properties: xfconf-query -c 'xfce4-panel' -l
+        if [ ! -z "$PLUGIN" ]; then
+            echo "Set $PLUGIN properties" | tee -a "$LOG"
+            xfconf-query -n -c xfce4-panel -p "$PLUGIN/display-type" -t uint -s 2
+            xfconf-query -n -c xfce4-panel -p "$PLUGIN/display-name" -t uint -s 1
+            xfconf-query -n -c xfce4-panel -p "$PLUGIN/group-policy" -t uint -s 0
+            # Save state file
+            touch "$XKBSTATE"
+            # Up the counter
+            NRADDED=$(( NRADDED + 1 ))
+        fi
+    fi
+fi
+
+# Re-order the plugins
+if (( NRADDED > 0 )); then
+    PLUGINBEFOREID=$(xfconf-query -c xfce4-panel -l -v | grep $PLUGINBEFORE | awk '{print $1}' | grep -oP '[0-9]+$')
+    echo "Re-order panel plugins: move added plugins before $PLUGINBEFORE (ID=$PLUGINBEFOREID)" | tee -a "$LOG"
+    PLUGINIDS=$(xfconf-query -c xfce4-panel -l -v | grep plugin-ids | awk '{print $1}')
+    IDS=$(xfconf-query -c xfce4-panel -p $PLUGINIDS | grep -oP '[0-9]+')
+    echo "Current plugin order: $(echo $IDS | tr '\r\n' ' ')" | tee -a "$LOG"
+    NRIDS=$(echo "$IDS" | wc -l)
+    for ID in $IDS; do
+        POS=$(( POS + 1 ))
+        #echo "$POS <= $NRIDS - $NRADDED = $(( NRIDS - NRADDED ))" | tee -a "$LOG"
+        if (( POS <= NRIDS - NRADDED )); then
+            #echo "    $ID == $PLUGINBEFOREID" | tee -a "$LOG"
+            if (( ID == PLUGINBEFOREID )) || [ ! -z "$SAVEIDSTR" ]; then
+                SAVEIDSTR="$SAVEIDSTR -t int -s $ID"
+            else
+                IDSTR="$IDSTR -t int -s $ID"
+            fi
+        else
+            IDSTR="$IDSTR -t int -s $ID"
+        fi
+    done
+    if [ ! -z "$IDSTR" ] && [ ! -z "$SAVEIDSTR" ]; then
+        echo "Remove $PLUGINIDS property" | tee -a "$LOG"
+        eval "xfconf-query -c xfce4-panel -p $PLUGINIDS -rR"
+        echo "Re-create: xfconf-query -n -c xfce4-panel -p $PLUGINIDS $IDSTR $SAVEIDSTR" | tee -a "$LOG"
+        eval "xfconf-query -n -c xfce4-panel -p $PLUGINIDS $IDSTR $SAVEIDSTR"
+        IDS=$(xfconf-query -c xfce4-panel -p $PLUGINIDS | grep -oP '[0-9]+')
+        echo "New plugin order: $(echo $IDS | tr '\r\n' ' ')" | tee -a "$LOG"
+    fi
+    # Reload panel
+    echo 'Reload panel' | tee -a "$LOG"
+    xfce4-panel -r
+fi

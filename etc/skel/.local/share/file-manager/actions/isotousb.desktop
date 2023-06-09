@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Action
+Name=ISO to USB
+Profiles=on_iso;
+Icon=media-optical
+
+[X-Action-Profile on_iso]
+MimeTypes=application/x-cd-image;
+Exec=iso-usb -i %f
+SelectionCount==1

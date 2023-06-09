@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Action
+Name=Burn ISO
+Name[ca]=Gravar ISO
+Name[es]=Grabar ISO
+Name[fr]=Grave un ISO
+Name[it]=Masterizzare ISO
+Name[ja]=isoファイルを焼く
+Name[nl]=Brand een ISO
+Name[pt_BR]=Gravar ISO
+Name[pt_PT]=Gravar ISO
+Name[sv]=Bränn ISO
+Profiles=on_iso;
+Icon=media-optical
+
+[X-Action-Profile on_iso]
+MimeTypes=application/x-cd-image;
+Exec=xfburn -i %f
+SelectionCount==1

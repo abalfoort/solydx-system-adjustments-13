@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Xfce4 Panel Plugins
+GenericName=Xfce4 Panel Plugins
+Comment=Auto install xfce4-panel plugins
+Exec=xfce4-panel-plugins
+Terminal=false
+Type=Application
+StartupNotify=false
+OnlyShowIn=XFCE;

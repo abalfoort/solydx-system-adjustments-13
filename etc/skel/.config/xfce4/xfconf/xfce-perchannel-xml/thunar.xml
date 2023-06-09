@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="thunar" version="1.0">
+  <property name="last-view" type="string" value="ThunarDetailsView"/>
+  <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_75_PERCENT"/>
+  <property name="last-window-maximized" type="bool" value="false"/>
+  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
+  <property name="misc-single-click" type="bool" value="false"/>
+  <property name="misc-date-style" type="string" value="THUNAR_DATE_STYLE_ISO"/>
+  <property name="last-sort-column" type="string" value="THUNAR_COLUMN_NAME"/>
+  <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
+  <property name="last-show-hidden" type="bool" value="false"/>
+  <property name="last-details-view-column-widths" type="string" value="50,465,158,50,116,50,50,64,376,50,50,74,50,173"/>
+  <property name="last-window-width" type="int" value="952"/>
+  <property name="last-window-height" type="int" value="589"/>
+  <property name="last-separator-position" type="int" value="170"/>
+  <property name="last-toolbar-item-order" type="string" value="0,1,3,2,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20"/>
+  <property name="last-toolbar-visible-buttons" type="string" value="0,1,1,1,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0"/>
+</channel>

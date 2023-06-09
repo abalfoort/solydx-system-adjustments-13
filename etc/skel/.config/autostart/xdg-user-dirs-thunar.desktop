@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=User folders bookmarks for Thunar
+TryExec=Thunar-bookmarks
+Exec=Thunar-bookmarks
+StartupNotify=false
+NoDisplay=true
+
+X-GNOME-Autostart-Phase=Initialization
+X-KDE-autostart-phase=1

@@ -1,0 +1,186 @@
+#!/bin/bash
+# postinst script 
+# see: dh_installdeb(1)
+
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see http://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+#
+
+# Set the name of the Plymouth theme
+PLYMOUTH_THEME='solydx-logo'
+
+function sed_append_sting {
+  PATTERN=$1
+  LINE=$2
+  FLE=$3
+
+  if [ -e $FLE ]; then
+    if grep -q "$PATTERN\s*$" "$FLE"; then
+      # Escape forward slashes
+      LINE=$(echo $LINE | sed 's/\//\\\//g')
+      sed -i -e "s/.*$PATTERN.*/$LINE/" "$FLE"
+    elif ! grep -q "$PATTERN" "$FLE"; then
+      echo $LINE >> "$FLE"
+    fi
+  fi
+}
+
+function adust_trigger_files {
+    # Whisker menu
+    FF='/usr/bin/firefox-esr'
+    if [ ! -e "$FF" ]; then
+        FF='/usr/bin/firefox'
+    fi
+    if [ -e "$FF" ]; then
+        FLE='/etc/skel/.config/xfce4/panel/whiskermenu-9.rc'
+        if [ -f $FLE ]; then
+            BN=$(basename "$FF")
+            sed -i -e "s/firefox[a-z-]*.desktop/$BN.desktop/" "$FLE"
+        fi
+    fi
+
+    # Mozilla
+    FLE='/usr/lib/firefox-esr/distribution/distribution.ini'
+    if [ -f $FLE ]; then
+        sed -i 's/"Breeze"/"Breeze-X"/g' "$FLE"
+    fi
+    FLE='/usr/lib/thunderbird/distribution/distribution.ini'
+    if [ -f $FLE ]; then
+        sed -i 's/"Breeze"/"Breeze-X"/g' "$FLE"
+    fi
+}
+
+function _file_to_root {
+    cd $1
+    ROOTDIR="/root/$3"
+    mkdir -p $ROOTDIR
+    for F in $2; do
+        if [ -e "$F" ] && [ ! -e "${ROOTDIR}${F}" ]; then
+            cp -v --parents "$F" "${ROOTDIR}"
+        fi
+    done
+}
+
+function install_root_files {
+    # Copy config files to root
+    FLES='.config/gtk-3.0/settings.ini .config/xfce4/terminal/terminalrc .config/Thunar/thunarrc .config/Thunar/uca.xml .config/Thunar/volmanrc .config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml .config/mimeapps.list .gtkrc-2.0'
+    _file_to_root '/etc/skel' "$FLES"
+}
+
+case "$1" in    
+  configure|reconfigure)
+    # Configure LightDM
+    CONF='/etc/lightdm/lightdm-gtk-greeter.conf'
+    if [ -e '/etc/lightdm/lightdm-kde-greeter.conf' ]; then
+      CONF='/etc/lightdm/lightdm-kde-greeter.conf'
+    fi
+    if [ -e $CONF ]; then
+      if ! grep -q 'solydx-lightdmbg' $CONF; then
+        sed_append_sting 'background=' 'background=/usr/share/images/desktop-base/solydx-lightdmbg.png' $CONF
+        sed_append_sting 'theme-name=' 'theme-name=Breeze-X' $CONF
+        sed_append_sting 'icon-theme-name=' 'icon-theme-name=evolvere-2' $CONF
+      fi
+      sed_append_sting 'default-user-image=' 'default-user-image=/usr/share/pixmaps/faces/user-generic.png' $CONF
+      sed_append_sting 'font-name=' 'font-name=Clear Sans 11' $CONF
+      sed_append_sting 'position=' 'position=60% 30%' $CONF
+      sed_append_sting 'transition-duration=' 'transition-duration=1000' $CONF
+      sed_append_sting 'user-background=' 'user-background=false' $CONF
+      sed_append_sting 'xft-antialias=' 'xft-antialias=true' $CONF
+      sed_append_sting 'xft-dpi=' 'xft-dpi=96' $CONF
+      sed_append_sting 'xft-hintstyle=' 'xft-hintstyle=slight' $CONF
+      sed_append_sting 'xft-rgba=' 'xft-rgba=rgb' $CONF
+      sed_append_sting 'show-indicators=' 'show-indicators=~host;~spacer;~session;~language;~a11y;~clock;~power;' $CONF
+      sed_append_sting 'show-clock=' 'show-clock=true' $CONF
+      sed_append_sting 'clock-format=' 'clock-format=%d %b, %H:%M' $CONF
+      sed -i 's/greybird-solydx/Breeze-X/' $CONF
+      sed -i 's/lightdmbg-flat/lightdmbg/g' $CONF
+    fi
+
+    CONF='/etc/lightdm/lightdm.conf'
+    if [ -e $CONF ]; then
+      sed -i 's/^#greeter-hide-users=.*/greeter-hide-users=false/' $CONF
+      sed -i 's/^#allow-user-switching=.*/allow-user-switching=true/' $CONF
+    fi
+
+    CONF='/etc/lightdm/users.conf'
+    if [ -e $CONF ]; then
+      sed -i -e '/^minimum-uid=/ c minimum-uid=1000' $CONF
+    fi
+
+    # Change Grub2 Theme
+    UPDGRUB=false
+    DEFGRUB='/etc/default/grub'
+    if [ -f "$DEFGRUB" ]; then
+      if grep -q '^GRUB_THEME=' $DEFGRUB; then
+        sed -i 's|^GRUB_THEME=.*|GRUB_THEME=/boot/grub/themes/solydxk/theme.txt|' $DEFGRUB
+        UPDGRUB=true
+      else
+        if ! grep -q 'GRUB_THEME=' $DEFGRUB; then
+          # Only append if GRUB_THEME= is not in DEFGRUB
+          echo -e '\n# Set theme\nGRUB_THEME=/boot/grub/themes/solydxk/theme.txt' >> $DEFGRUB
+          UPDGRUB=true
+        fi
+      fi
+
+      if ! grep -q 'GRUB_DISABLE_OS_PROBER=' $DEFGRUB; then
+        # Only append if GRUB_THEME= is not in DEFGRUB
+        echo -e '\n# Disable os-prober\nGRUB_DISABLE_OS_PROBER=false' >> $DEFGRUB
+        UPDGRUB=true
+      fi
+    fi
+
+    # Change Plymouth theme when needed
+    CONF='/etc/plymouth/plymouthd.conf'
+    if [ -e $CONF ]; then
+      CURTHEME=$(grep '^Theme' "$CONF" | awk -F'=' '{print $2}')
+      if [[ "$CURTHEME" == "$PLYMOUTH_THEME"* ]]; then
+        PLYMOUTH_THEME=$CURTHEME
+      fi
+      if grep -q "$PLYMOUTH_THEME" "$CONF"; then
+        plymouth-set-default-theme -R "$PLYMOUTH_THEME"
+        UPDGRUB=true
+      fi
+    fi
+
+    # Update Grub2
+    if $UPDGRUB && [ -e /usr/sbin/update-grub ]; then
+      update-grub
+    fi
+
+    adust_trigger_files
+    install_root_files
+
+  ;;
+
+  upgrade|update)
+
+  ;;
+  abort-upgrade|abort-remove|abort-deconfigure)
+
+  ;;
+  triggered)
+
+  ;;
+
+  *)
+    echo "postinst called with unknown argument \`$1'" >&2
+    exit 1
+  ;;
+esac
+
+# dh_installdeb will replace this with shell code automatically
+# generated by other debhelper scripts.
+
+#DEBHELPER#
+
+exit 0

@@ -1,0 +1,15 @@
+style "xfdesktop-icon-view" {
+    XfdesktopIconView::label-alpha = 0
+
+    fg[NORMAL] = "#000000"
+    fg[SELECTED] = "#000000"
+    fg[ACTIVE] = "#000000"
+}
+widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
+gtk-font-name=Clear Sans Regular 11
+gtk-theme-name=Breeze-X
+gtk-icon-theme-name=evolvere-2
+gtk-fallback-icon-theme=gnome
+gtk-toolbar-style=GTK_TOOLBAR_ICONS
+gtk-menu-images=0
+gtk-button-images=0

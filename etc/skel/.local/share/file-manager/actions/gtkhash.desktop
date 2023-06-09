@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Action
+Name=GtkHash
+Profiles=on_file;
+Icon=gtkhash
+
+[X-Action-Profile on_file]
+MimeTypes=!inode/directory;*;
+Exec=gtkhash %f
+SelectionCount==1

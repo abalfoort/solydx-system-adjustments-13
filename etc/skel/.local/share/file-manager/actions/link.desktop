@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Action
+Name=Create link
+Name[ca]=Crear enllaç
+Name[es]=Crear enlace
+Name[fr]=Créer un lien symbolique
+Name[it]=Crea collegamento
+Name[ja]=リンクを作成
+Name[nl]=Maak een link
+Name[pt_BR]=Criar atalho
+Name[pt_PT]=Criar ligação
+Name[sv]=Skapa genväg
+Profiles=on_any;
+Icon=emblem-symbolic-link
+
+[X-Action-Profile on_any]
+Exec=ln -s %f symlink-%b
+SelectionCount==1

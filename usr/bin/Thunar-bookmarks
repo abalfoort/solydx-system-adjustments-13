@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BOOKMARKS="$HOME/.config/gtk-3.0/bookmarks"
+
+if [ ! -f "$BOOKMARKS" ]; then
+    echo "file://$(xdg-user-dir DOCUMENTS)" > "$BOOKMARKS"
+    echo "file://$(xdg-user-dir DOWNLOAD)" >> "$BOOKMARKS"
+    echo "file://$(xdg-user-dir MUSIC)" >> "$BOOKMARKS"
+    echo "file://$(xdg-user-dir PICTURES)" >> "$BOOKMARKS"
+    echo "file://$(xdg-user-dir VIDEOS)" >> "$BOOKMARKS"
+fi

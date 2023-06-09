@@ -1,0 +1,21 @@
+[Desktop Entry]
+Type=Action
+Name=Open as Root
+Name[ca]=Obre com a root
+Name[es]=Abrir como root
+Name[fr]=Ouvrir en tant que root
+Name[it]=Apri come root
+Name[nl]=Open als root
+Name[pt_BR]=Abrir como administrador
+Name[pt_PT]=Abrir como administrador
+Name[sv]=Öppna som root
+Icon=gtk-dialog-authentication
+Profiles=on_folder;on_file;
+
+[X-Action-Profile on_folder]
+MimeTypes=inode/directory;
+Exec=pkexec pcmanfm %u
+
+[X-Action-Profile on_file]
+MimeTypes=!inode/directory;*;
+Exec=pkexec xdg-open %f
