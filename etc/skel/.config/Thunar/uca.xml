@@ -144,7 +144,6 @@
     <startup-notify/>
     <directories/>
   </action>
-
   <action>
     <icon>folder-open</icon>
     <name>Open Folder as root</name>
@@ -171,7 +170,6 @@
     <patterns>*</patterns>
     <directories/>
   </action>
-
   <action>
     <icon>text-plain</icon>
     <name>Open file as root</name>
@@ -198,7 +196,6 @@
     <patterns>*</patterns>
     <text-files/>
   </action>
-
   <action>
     <icon>emblem-symbolic-link</icon>
     <name>Create link</name>
@@ -230,7 +227,6 @@
     <text-files/>
     <video-files/>
   </action>
-
   <action>
     <icon>gtkhash</icon>
     <name>GTK Hash</name>
@@ -261,16 +257,14 @@
     <text-files/>
     <video-files/>
   </action>
-  
-    <action>
+  <action>
     <icon>media-optical</icon>
     <name>Mount squashfs file</name>
-    <command>DEVICE=$(udisksctl loop-setup -r -f '%f' | grep -o '/dev/loop[0-9]*'); MOUNT=$(udisksctl mount -b ${DEVICE} | grep -o '/media/.*[^.]'); xdg-open "$MOUNT";</command>
+    <command>DEVICE=$(udisksctl loop-setup -r -f &apos;%f&apos; | grep -o &apos;/dev/loop[0-9]*&apos;); MOUNT=$(udisksctl mount -b ${DEVICE} | grep -o &apos;/media/.*[^.]&apos;); xdg-open &quot;$MOUNT&quot;;</command>
     <description>Mount a squashfs file</description>
     <patterns>*.squashfs;*.SQUASHFS</patterns>
     <other-files/>
   </action>
-
   <action>
     <icon>media-optical</icon>
     <name>Mount ISO</name>
@@ -283,7 +277,7 @@
     <name xml:lang="pt_BR">Montar ISO</name>
     <name xml:lang="pt_PT">Montar ISO</name>
     <name xml:lang="sv">Montera ISO</name>
-    <command>DEVICE=$(udisksctl loop-setup -r -f '%f' | grep -o '/dev/loop[0-9]*'); MOUNT=$(udisksctl mount -b ${DEVICE}p1 | grep -o '/media/.*[^.]'); xdg-open "$MOUNT";</command>
+    <command>DEVICE=$(udisksctl loop-setup -r -f &apos;%f&apos; | grep -o &apos;/dev/loop[0-9]*&apos;); MOUNT=$(udisksctl mount -b ${DEVICE}p1 | grep -o &apos;/media/.*[^.]&apos;); xdg-open &quot;$MOUNT&quot;;</command>
     <description>Mount an ISO file</description>
     <description xml:lang="ca">Munta un fitxer ISO</description>
     <description xml:lang="es">Monta archivo ISO</description>
@@ -297,7 +291,6 @@
     <patterns>*.iso;*.ISO</patterns>
     <other-files/>
   </action>
-  
   <action>
     <icon>media-optical</icon>
     <name>ISO to USB</name>
@@ -306,7 +299,6 @@
     <patterns>*.iso;*.ISO</patterns>
     <other-files/>
   </action>
-  
   <action>
     <icon>media-optical</icon>
     <name>Burn ISO</name>
@@ -333,7 +325,6 @@
     <patterns>*.iso;*.ISO</patterns>
     <other-files/>
   </action>
-  
   <action>
     <icon>object-rotate-right</icon>
     <name>Rotate clockwise</name>
@@ -360,7 +351,6 @@
     <patterns>*.jpg;*.JPG;*.jpeg;*.JPEG</patterns>
     <image-files/>
   </action>
-  
   <action>
     <icon>object-rotate-left</icon>
     <name>Rotate counter-clockwise</name>
@@ -387,7 +377,117 @@
     <patterns>*.jpg;*.JPG;*.jpeg;*.JPEG</patterns>
     <image-files/>
   </action>
-
+  <action>
+    <icon>arrow-right-double</icon>
+    <name>ImgMergeHor</name>
+    <command>convert +append %F joined-horizontal.png</command>
+    <description>Glue images horizontally</description>
+    <patterns>*</patterns>
+    <image-files/>
+  </action>
+  <action>
+      <icon>arrow-down-double</icon>
+      <name>ImgMergeVer</name>
+      <command>convert -append %F joined-vertical.png</command>
+      <description>Glue images vertically</description>
+      <patterns>*</patterns>
+      <image-files/>
+  </action>
+  <action>
+      <icon>emblem-photos</icon>
+      <name>Show photo metadata</name>
+      <command>exiftool %N | zenity --text-info --title=&quot;Exif data&quot; --width=600 --height=800</command>
+      <description>Show jpeg metadata</description>
+      <patterns>*</patterns>
+      <image-files/>
+  </action>
+  <action>
+      <icon>emblem-photos</icon>
+      <name>Strip exif data</name>
+      <command>jhead -purejpg %f</command>
+      <description>Delete all exif data in jpg photos</description>
+      <patterns>*.jpg;*.JPG;*.jpeg;*.JPEG</patterns>
+      <image-files/>
+  </action>
+  <action>
+      <icon>application-x-desktop</icon>
+      <name>Media File Metadata</name>
+      <command>mediainfo %N | zenity --text-info --title=&quot;Media Info&quot; --width=600 --height=800</command>
+      <description>Grabs info from a media (audio/video) file</description>
+      <patterns>*</patterns>
+      <audio-files/>
+      <image-files/>
+      <other-files/>
+      <video-files/>
+  </action>
+  <action>
+      <icon>audio-ac3</icon>
+      <name>Extract AAC Audio - without container</name>
+      <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -map 0:a -c:a copy &quot;${0%%.*}&quot;.aac&apos; %F</command>
+      <description>Extract as .aac - change map if you get wrong stream</description>
+      <patterns>*</patterns>
+      <audio-files/>
+      <video-files/>
+  </action>
+  <action>
+      <icon>audio-x-flac+ogg</icon>
+      <name>Extract OPUS Audio from WEBM</name>
+      <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -vn -c:a copy &quot;${0%%.*}&quot;.opus&apos; %F</command>
+      <description>Change into OPUS own container format OGG</description>
+      <patterns>*</patterns>
+      <audio-files/>
+      <video-files/>
+  </action>
+  <action>
+      <icon>audio-ac3</icon>
+      <name>Extract M4A Audio</name>
+      <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -map 0:a -c:a copy &quot;${0%%.*}&quot;.m4a&apos; %F</command>
+      <description>Extract as m4a, change map if you get wrong stream</description>
+      <patterns>*.flv;*.mp4;*.avi</patterns>
+      <audio-files/>
+      <video-files/>
+  </action>
+  <action>
+      <icon>media-optical-audio</icon>
+      <name>Extract MP3 Audio</name>
+      <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -q:a 0 -map a &quot;${0%%.*}&quot;.mp3&apos; %F</command>
+      <description>Extract as MP3 if M4A doesn&apos;t work</description>
+      <patterns>*</patterns>
+      <audio-files/>
+      <video-files/>
+  </action>
+  <action>
+      <icon>application-pdf</icon>
+      <name>Show PDF metadata</name>
+      <command>exiftool %N | zenity --text-info --title=&quot;PDF Toolkit&quot; --width=600 --height=800</command>
+      <description>Show PDF metadata</description>
+      <patterns>*.pdf</patterns>
+      <other-files/>
+  </action>
+  <action>
+      <icon>xpdf</icon>
+      <name>Strip PDF</name>
+      <command>exiftool -all:all=  -overwrite_original %f &amp;&amp; qpdf --linearize %f stripped.pdf</command>
+      <description>Permanently strip PDF metadata</description>
+      <patterns>*.pdf</patterns>
+      <other-files/>
+  </action>
+  <action>
+      <icon>accessories-dictionary</icon>
+      <name>PDF title</name>
+      <command>exiftool -Title=&quot; &quot; %N | zenity --entry --title=&quot;Change title tag&quot; --text=&quot;New title:&quot; --entry-text=&quot; &quot;</command>
+      <description>Edit PDF title tag</description>
+      <patterns>*.pdf</patterns>
+      <other-files/>
+  </action>
+  <action>
+      <icon></icon>
+      <name>PDF author</name>
+      <command>exiftool -Author=&quot; &quot; %N | zenity --entry --title=&quot;Change author tag&quot; --text=&quot;New author:&quot; --entry-text=&quot; &quot;</command>
+      <description>Edit PDF author tag</description>
+      <patterns>*.pdf</patterns>
+      <other-files/>
+  </action>
   <action>
     <icon>document-print</icon>
     <name>Print File</name>
@@ -414,7 +514,6 @@
     <patterns>*</patterns>
     <text-files/>
   </action>
-
   <action>
     <icon>edit-find</icon>
     <name>Search</name>
@@ -441,7 +540,6 @@
     <patterns>*</patterns>
     <directories/>
   </action>
-
   <action>
     <icon>fonts</icon>
     <name>Install .ttf Font</name>
@@ -484,5 +582,28 @@
     <patterns>*.ttf;*.TTF;*.otf;*.OTF</patterns>
     <other-files/>
   </action>
-
+  <action>
+    <icon>folder-remote</icon>
+    <name>Samba public read-only</name>
+    <command>net usershare add %n %f &quot;&quot; Everyone:R guest_ok=y</command>
+    <description>Create a public read only samba share</description>
+    <patterns>*</patterns>
+    <directories/>
+  </action>
+  <action>
+      <icon>folder-remote</icon>
+      <name>Samba public writeable</name>
+      <command>net usershare add %n %f &quot;&quot; Everyone:F guest_ok=y &amp;&amp; chmod 777 %f</command>
+      <description>Create a public writeable samba share</description>
+      <patterns>*</patterns>
+      <directories/>
+  </action>
+  <action>
+      <icon>folder-remote</icon>
+      <name>Samba remove share</name>
+      <command>net usershare delete %n &amp;&amp; chmod 755 %f</command>
+      <description>Remove a samba share</description>
+      <patterns>*</patterns>
+      <directories/>
+  </action>
 </actions>
