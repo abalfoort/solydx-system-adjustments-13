@@ -1,3 +1,34 @@
+solydx-system-adjustments-13 (1.0.5) stable; urgency=low
+
+  * Some minor adjustments to Thunar actions
+  * Added recommends for Thunar actions
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Tue, 20 Jun 2023 09:07:41 +0200
+
+solydx-system-adjustments-13 (1.0.4) stable; urgency=low
+
+  * Fix Thunar actions order
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 19 Jun 2023 17:13:54 +0200
+
+solydx-system-adjustments-13 (1.0.3) stable; urgency=low
+
+  * Added Thunar actions
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 19 Jun 2023 12:49:37 +0200
+
+solydx-system-adjustments-13 (1.0.2) stable; urgency=low
+
+  * Adjust panel clock settings
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 12 Jun 2023 10:43:56 +0200
+
+solydx-system-adjustments-13 (1.0.1) stable; urgency=low
+
+  * Adjusted info file
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Sun, 11 Jun 2023 13:40:39 +0200
+
 solydx-system-adjustments-13 (1.0.0) stable; urgency=low
 
   * Initial version 1.0.0
