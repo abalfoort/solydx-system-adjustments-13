@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.0.6) stable; urgency=low
+
+  * Updated uca.xml
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Wed, 21 Jun 2023 09:43:47 +0200
+
 solydx-system-adjustments-13 (1.0.5) stable; urgency=low
 
   * Some minor adjustments to Thunar actions
