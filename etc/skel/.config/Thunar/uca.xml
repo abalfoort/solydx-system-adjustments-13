@@ -148,24 +148,26 @@
     <icon>folder-open</icon>
     <name>Open Folder as root</name>
     <name xml:lang="ca">Obre el directori com a root</name>
+    <name xml:lang="de">Ordner als root öffnen</name>
     <name xml:lang="es">Abrir carpeta como root</name>
     <name xml:lang="fr">Ouvrir Répertoire en tant que root</name>
     <name xml:lang="it">Apri cartella come root</name>
     <name xml:lang="ja">rootでフォルダを開く</name>
     <name xml:lang="nl">Open map als root</name>
-    <name xml:lang="pt_BR">Abrir pasta como administrador</name>
-    <name xml:lang="pt_PT">Abrir pasta como administrador</name>
+    <name xml:lang="pt">Abrir pasta como administrador</name>
+    <name xml:lang="ru">Открыть папку с правами root</name>
     <name xml:lang="sv">Öppna mapp som root</name>
     <command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY Thunar %F</command>
     <description>Opens folder in Thunar with root permission</description>
     <description xml:lang="ca">Obre el directori al Thunar amb privilegis de root</description>
+    <description xml:lang="de">Ordner mit Administratorrechten öffnen</description>
     <description xml:lang="es">Abrir carpeta en Thunar con privilegios de root</description>
     <description xml:lang="fr">Ouvre le dossier en root dans Thunar</description>
     <description xml:lang="it">Apre la cartella in thunar con privilegi di root</description>
     <description xml:lang="ja">フォルダをroot権限のThunarで開きます</description>
     <description xml:lang="nl">Opent de map in Thunar met adminrechten</description>
-    <description xml:lang="pt_BR">Abre uma pasta no thunar com privilégios de administrador</description>
-    <description xml:lang="pt_PT">Abrir pasta no thunar com previlégios de administrador</description>
+    <description xml:lang="pt">Abre uma pasta no thunar com privilégios de administrador</description>
+    <description xml:lang="ru">Открывает папку в Thunar с правами root</description>
     <description xml:lang="sv">Öppnar mappen i Thunar med root-rättigheter</description>
     <patterns>*</patterns>
     <directories/>
@@ -174,24 +176,26 @@
     <icon>text-plain</icon>
     <name>Open file as root</name>
     <name xml:lang="ca">Obrir arxiu com a root</name>
+    <name xml:lang="de">Datei als root öffnen</name>
     <name xml:lang="es">Abrir archivo como root</name>
     <name xml:lang="fr">Ouvrir Fichier en tant que root</name>
     <name xml:lang="it">Apri file come root</name>
     <name xml:lang="ja">rootとしてファイルを開く</name>
     <name xml:lang="nl">Open bestand als root</name>
-    <name xml:lang="pt_BR">Abrir arquivo como administrador</name>
-    <name xml:lang="pt_PT">Abrir arquivo como administrador</name>
+    <name xml:lang="pt">Abrir arquivo como administrador</name>
+    <name xml:lang="ru">Открыть файл от имени root</name>
     <name xml:lang="sv">Öppna fil som root</name>
     <command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY mousepad %F</command>
     <description>Opens file in Mousepad with root permission</description>
     <description xml:lang="ca">Obrir arxiu en Mousepad amb privilegis de root</description>
+    <description xml:lang="de">Datei mit Administratorrechten öffnen</description>
     <description xml:lang="es">Abrir archivo en mousepad con privilegios de root</description>
     <description xml:lang="fr">Ouvre le fichier avec mousepad et les privilèges root</description>
     <description xml:lang="it">Apri file in mousepad con privilegi di root</description>
     <description xml:lang="ja">root権限を持つ mousepad でファイルを開く</description>
     <description xml:lang="nl">Open het bestand in mousepad met adminrechten</description>
-    <description xml:lang="pt_BR">Abre uma arquivo no mousepad com privilégios de administrador</description>
-    <description xml:lang="pt_PT">Abrir arquivo no mousepad com previlégios de administrador</description>
+    <description xml:lang="pt">Abrir arquivo no mousepad com previlégios de administrador</description>
+    <description xml:lang="ru">Открывает файлы в Mousepad с правами root</description>
     <description xml:lang="sv">Öppnar fil i mousepad med root-rättigheter</description>
     <patterns>*</patterns>
     <text-files/>
@@ -200,6 +204,7 @@
     <icon>emblem-symbolic-link</icon>
     <name>Create link</name>
     <name xml:lang="ca">Crear enllaç</name>
+    <name xml:lang="de">Link erstellen</name>
     <name xml:lang="es">Crear enlace</name>
     <name xml:lang="fr">Créer un lien symbolique</name>
     <name xml:lang="it">Crea collegamento</name>
@@ -207,10 +212,12 @@
     <name xml:lang="nl">Maak een link</name>
     <name xml:lang="pt_BR">Criar atalho</name>
     <name xml:lang="pt_PT">Criar ligação</name>
+    <name xml:lang="ru">Создать ссылку</name>
     <name xml:lang="sv">Skapa genväg</name>
     <command>ln -s %f symlink-%n</command>
     <description>Creates a link to a folder or file</description>
     <description xml:lang="ca">crea un enllaç a un directori o fitxer</description>
+    <description xml:lang="de">Erstellt einen symbolischen Link zu einer Datei oder einem Verzeichnis</description>
     <description xml:lang="es">Realiza un enlace hacia una carpeta o archivo</description>
     <description xml:lang="fr">Créer un lien vers un dossier ou vers un fichier</description>
     <description xml:lang="it">Crea un collegamento ad una cartella o ad un file</description>
@@ -218,6 +225,7 @@
     <description xml:lang="nl">Maakt een link naar een map of bestand</description>
     <description xml:lang="pt_BR">cria um atalho para a pasta ou arquivo</description>
     <description xml:lang="pt_PT">cria uma ligação a uma pasta ou um ficheiro</description>
+    <description xml:lang="ru">Создает ссылку на папку или файл</description>
     <description xml:lang="sv">gör en genväg till en mapp eller fil</description>
     <patterns>*</patterns>
     <directories/>
@@ -230,18 +238,20 @@
   <action>
     <icon>gtkhash</icon>
     <name>GTK Hash</name>
-    <name xml:lang="ca">Comprovació MD5/SHA</name>
-    <name xml:lang="es">Suma de verificación MD5/SHA</name>
-    <name xml:lang="fr">GTK Hash</name>
-    <name xml:lang="it">Calcolo MD5/SHA</name>
+    <name xml:lang="ca">GTK Hash MD5/SHA</name>
+    <name xml:lang="de">GTK Hash MD5/SHA</name>
+    <name xml:lang="es">GTK Hash MD5/SHA</name>
+    <name xml:lang="fr">GTK Hash MD5/SHA</name>
+    <name xml:lang="it">GTK Hash MD5/SHA</name>
     <name xml:lang="ja">MD5チェックサム</name>
-    <name xml:lang="nl">GTK Hash</name>
-    <name xml:lang="pt_BR">Verificador MD5/SHA</name>
-    <name xml:lang="pt_PT">MD5/SHA checksum</name>
-    <name xml:lang="sv">MD5/SHA-kontrollsumma</name>
+    <name xml:lang="nl">GTK Hash MD5/SHA</name>
+    <name xml:lang="pt">GTK Hash MD5/SHA</name>
+    <name xml:lang="ru">GTK Hash MD5/SHA</name>
+    <name xml:lang="sv">GTK Hash MD5/SHA</name>
     <command>gtkhash %f</command>
     <description>Computes MD5/SHA checksum for the selected file</description>
     <description xml:lang="ca">Calcula la suma MD5/SHA per al fitxer seleccionat</description>
+    <description xml:lang="de">Errechnet die MD5/SHA-Prüfsumme für eine Datei</description>
     <description xml:lang="es">Comprobar la suma de verificación MD5/SHA para el archivo seleccionado</description>
     <description xml:lang="fr">Calcule la somme de contrôle MD5/SHA pour le fichier sélectionné</description>
     <description xml:lang="it">Controlla la somma MD5/SHA per il file selezionato</description>
@@ -249,6 +259,7 @@
     <description xml:lang="nl">Berekent de MD5/SHA hash voor het geselecteerde bestand</description>
     <description xml:lang="pt_PT">Executa MD5/SHA checksum para o ficheiro seleccionado</description>
     <description xml:lang="pt_BR">Calcula o verificador MD5/SHA do arquivo selecionado</description>
+    <description xml:lang="ru">Вычисляет контрольную сумму MD5/SHA для выбранного файла</description>
     <description xml:lang="sv">Räknar ut MD5-kontrollsumman för den valda filen</description>
     <patterns>*</patterns>
     <audio-files/>
@@ -259,9 +270,30 @@
   </action>
   <action>
     <icon>media-optical</icon>
-    <name>Mount squashfs file</name>
+    <name>Mount SquashFS file</name>
+    <name xml:lang="ca">Munta SquashFS</name>
+    <name xml:lang="de">Mount SquashFS</name>
+    <name xml:lang="es">Montar SquashFS</name>
+    <name xml:lang="fr">Monter SquashFS</name>
+    <name xml:lang="it">Monta SquashFS</name>
+    <name xml:lang="ja">SquashFS をマウント</name>
+    <name xml:lang="nl">Koppel SquashFS</name>
+    <name xml:lang="pt">Montar SquashFS</name>
+    <name xml:lang="ru">Монтировать SquashFS</name>
+    <name xml:lang="sv">Montera SquashFS</name>
     <command>DEVICE=$(udisksctl loop-setup -r -f &apos;%f&apos; | grep -o &apos;/dev/loop[0-9]*&apos;); MOUNT=$(udisksctl mount -b ${DEVICE} | grep -o &apos;/media/.*[^.]&apos;); xdg-open &quot;$MOUNT&quot;;</command>
     <description>Mount a squashfs file</description>
+    <description xml:lang="ca">Munta un SquashFS</description>
+    <description xml:lang="de">Ein SquashFS einbinden</description>
+    <description xml:lang="es">Monta archivo SquashFS</description>
+    <description xml:lang="fr">Monte un SquashFS</description>
+    <description xml:lang="it">Monta un SquashFS</description>
+    <description xml:lang="ja">SquashFS ファイルをマウントする</description>
+    <description xml:lang="nl">Koppel een SquashFS</description>
+    <description xml:lang="pt_BR">Monta um arquivo SquashFS</description>
+    <description xml:lang="pt_PT">Montar ficheiro SquashFS</description>
+    <description xml:lang="ru">Смонтировать SquashFS</description>
+    <description xml:lang="sv">Montera en SquashFS</description>
     <patterns>*.squashfs;*.SQUASHFS</patterns>
     <other-files/>
   </action>
@@ -269,17 +301,19 @@
     <icon>media-optical</icon>
     <name>Mount ISO</name>
     <name xml:lang="ca">Munta ISO</name>
+    <name xml:lang="de">Mount ISO</name>
     <name xml:lang="es">Montar ISO</name>
     <name xml:lang="fr">Monter ISO</name>
     <name xml:lang="it">Monta ISO</name>
     <name xml:lang="ja">ISOをマウント</name>
     <name xml:lang="nl">Koppel ISO</name>
-    <name xml:lang="pt_BR">Montar ISO</name>
-    <name xml:lang="pt_PT">Montar ISO</name>
+    <name xml:lang="pt">Montar ISO</name>
+    <name xml:lang="ru">Монтировать ISO</name>
     <name xml:lang="sv">Montera ISO</name>
     <command>DEVICE=$(udisksctl loop-setup -r -f &apos;%f&apos; | grep -o &apos;/dev/loop[0-9]*&apos;); MOUNT=$(udisksctl mount -b ${DEVICE}p1 | grep -o &apos;/media/.*[^.]&apos;); xdg-open &quot;$MOUNT&quot;;</command>
     <description>Mount an ISO file</description>
     <description xml:lang="ca">Munta un fitxer ISO</description>
+    <description xml:lang="de">Ein ISO einbinden</description>
     <description xml:lang="es">Monta archivo ISO</description>
     <description xml:lang="fr">Monte un fichier ISO</description>
     <description xml:lang="it">Monta un file ISO</description>
@@ -287,6 +321,7 @@
     <description xml:lang="nl">Koppel een ISO bestand</description>
     <description xml:lang="pt_BR">Monta um arquivo ISO</description>
     <description xml:lang="pt_PT">Montar ficheiro ISO</description>
+    <description xml:lang="ru">Смонтировать ISO-файл</description>
     <description xml:lang="sv">Montera en ISO-fil</description>
     <patterns>*.iso;*.ISO</patterns>
     <other-files/>
@@ -294,8 +329,24 @@
   <action>
     <icon>media-optical</icon>
     <name>ISO to USB</name>
+    <name xml:lang="de">ISO auf USB</name>
+    <name xml:lang="es">ISO en USB</name>
+    <name xml:lang="fr">ISO sur USB</name>
+    <name xml:lang="it">ISO su USB</name>
+    <name xml:lang="nl">ISO naar USB</name>
+    <name xml:lang="pt">ISO em USB</name>
+    <name xml:lang="ru">ISO на USB</name>
+    <name xml:lang="sv">ISO till USB</name>
     <command>iso-usb -i %f</command>
     <description>Write an ISO to USB</description>
+    <description xml:lang="de">ISO-Datei auf einen USB-Stick schreiben</description>
+    <description xml:lang="es">Grabar un archivo ISO en USB</description>
+    <description xml:lang="fr">Graver un fichier ISO sur USB</description>
+    <description xml:lang="it">Scrivere un file ISO su USB</description>
+    <description xml:lang="nl">ISO-bestand naar USB schrijven</description>
+    <description xml:lang="pt">Gravar um ficheiro ISO em USB</description>
+    <description xml:lang="ru">записать ISO на USB</description>
+    <description xml:lang="sv">Skriva en ISO-fil till USB</description>
     <patterns>*.iso;*.ISO</patterns>
     <other-files/>
   </action>
@@ -303,25 +354,27 @@
     <icon>media-optical</icon>
     <name>Burn ISO</name>
     <name xml:lang="ca">Gravar ISO</name>
+    <name xml:lang="de">ISO brennen</name>
     <name xml:lang="es">Grabar ISO</name>
     <name xml:lang="fr">Grave un ISO</name>
     <name xml:lang="it">Masterizzare ISO</name>
     <name xml:lang="ja">isoファイルを焼く</name>
     <name xml:lang="nl">Brand een ISO</name>
-    <name xml:lang="pt_BR">Gravar ISO</name>
-    <name xml:lang="pt_PT">Gravar ISO</name>
+    <name xml:lang="pt">Gravar ISO</name>
+    <name xml:lang="ru">Прожечь ISO</name>
     <name xml:lang="sv">Bränn ISO</name>
     <command>xfburn -i %f</command>
     <description>Burn ISO file</description>
     <description xml:lang="ca">Gravar arxiu ISO</description>
-    <description xml:lang="es">Grabar archivo ISO</description>
-    <description xml:lang="fr">Grave un fichier ISO</description>
-    <description xml:lang="it">Masterizzare file ISO</description>
+    <description xml:lang="de">Eine ISO Datei auf CD/DVD brennen</description>
+    <description xml:lang="es">Grabar archivo ISO en CD/DVD</description>
+    <description xml:lang="fr">Grave un fichier ISO sur CD/DVD</description>
+    <description xml:lang="it">Masterizzare file ISO su CD/DVD</description>
     <description xml:lang="ja">isoファイルを焼く</description>
-    <description xml:lang="nl">Brand een ISO bestand</description>
-    <description xml:lang="pt_BR">Gravar um arquivo ISO</description>
-    <description xml:lang="pt_PT">Gravar ficheiro ISO</description>
-    <description xml:lang="sv">Bränn ISO-fil</description>
+    <description xml:lang="nl">Brand een ISO bestand op CD/DVD</description>
+    <description xml:lang="pt">Gravar ISO em CD/DVD</description>
+    <description xml:lang="ru">Прожечь ISO на CD/DVD</description>
+    <description xml:lang="sv">Bränn ISO på CD/DVD</description>
     <patterns>*.iso;*.ISO</patterns>
     <other-files/>
   </action>
@@ -329,25 +382,27 @@
     <icon>object-rotate-right</icon>
     <name>Rotate clockwise</name>
     <name xml:lang="ca">Girar a la dreta</name>
+    <name xml:lang="de">Nach rechts drehen</name>
     <name xml:lang="es">Girar a la derecha</name>
     <name xml:lang="fr">Faire pivoter à droite</name>
-    <name xml:lang="it">Ruotare in senso orario</name>
+    <name xml:lang="it">Ruotare a destra</name>
     <name xml:lang="ja">時計回りに回転させ</name>
-    <name xml:lang="nl">Met de klok mee draaien</name>
-    <name xml:lang="pt_BR">Girar no sentido horário</name>
-    <name xml:lang="pt_PT">Girar no sentido horário</name>
+    <name xml:lang="nl">Draai naar rechts</name>
+    <name xml:lang="pt">Girar à direita</name>
+    <name xml:lang="ru">Повернуть напра́во</name>
     <name xml:lang="sv">Rotera medurs</name>
     <command>exiftran -a -9 -i -p %F</command>
-    <description>Rotate jpeg image 90 degrees clockwise</description>
-    <description xml:lang="ca">Girar imatge jpeg 90 graus cap a la dreta</description>
-    <description xml:lang="es">Girar imagen jpeg 90 grados hacia la derecha</description>
-    <description xml:lang="fr">Fait pivoter un fichier jpeg de 90 degrés dans le sens des aiguilles d'une montre</description>
-    <description xml:lang="it">uota l'immagine di 90 gradi in senso orario jpeg</description>
+    <description>Rotate JPEG image 90 degrees clockwise</description>
+    <description xml:lang="ca">Girar imatge JPEG 90 graus cap a la dreta</description>
+    <description xml:lang="de">Ein JPEG-Bild im Uhrzeigersinn drehen</description>
+    <description xml:lang="es">Girar imagen JPEG 90 grados hacia la derecha</description>
+    <description xml:lang="fr">Fait pivoter un fichier JPEG de 90 degrés dans le sens horaire</description>
+    <description xml:lang="it">Ruota l'immagine JPEG di 90 gradi in senso orario</description>
     <description xml:lang="ja">時計回りに90度回転したJPEG画像を回転させます。</description>
-    <description xml:lang="nl">Draai een jpeg bestand 90 graden met de klok mee</description>
-    <description xml:lang="pt_BR">Rodar imagem jpeg 90 graus para a direita</description>
-    <description xml:lang="pt_PT">Rodar imagem jpeg 90 graus para a direita</description>
-    <description xml:lang="sv">Rotera JPEG-bild 90 grader medurs</description>
+    <description xml:lang="nl">Draai een JPEG bestand 90 graden met de klok mee</description>
+    <description xml:lang="pt">Rodar imagem JPEG 90 graus no sentido horário</description>
+    <description xml:lang="ru">Поворот JPEG-изображения на 90 градусов по часовой стрелке</description>
+    <description xml:lang="sv">Rotera JPEG-bild 90 grader till höger</description>
     <patterns>*.jpg;*.JPG;*.jpeg;*.JPEG</patterns>
     <image-files/>
   </action>
@@ -355,25 +410,27 @@
     <icon>object-rotate-left</icon>
     <name>Rotate counter-clockwise</name>
     <name xml:lang="ca">Girar a l'esquerra</name>
+    <name xml:lang="de">Nach links drehen</name>
     <name xml:lang="es">Girar a la izquierda</name>
     <name xml:lang="fr">Faire pivoter à gauche</name>
-    <name xml:lang="it">Ruotare in senso orario</name>
+    <name xml:lang="it">Ruotare a sinistra</name>
     <name xml:lang="ja">時計回りに回転させ</name>
-    <name xml:lang="nl">Draai tegen de klok in</name>
-    <name xml:lang="pt_BR">Girar no sentido horário</name>
-    <name xml:lang="pt_PT">Girar no sentido horário</name>
-    <name xml:lang="sv">Rotera medurs</name>
+    <name xml:lang="nl">Draai naar links</name>
+    <name xml:lang="pt">Girar à esquerda</name>
+    <name xml:lang="ru">Повернуть налево</name>
+    <name xml:lang="sv">Rotera moturs</name>
     <command>exiftran -a -2 -i -p %F</command>
-    <description>Rotate jpeg image 90 degrees counter-clockwise</description>
-    <description xml:lang="ca">Girar imatge jpeg de 90 graus cap a l'esquerra</description>
-    <description xml:lang="es">Girar imagen jpeg de 90 grados hacia la izquierda</description>
-    <description xml:lang="fr">Fait pivoter un fichier jpeg de 90 degrés dans le sens inverse des aiguilles d'une montre</description>
-    <description xml:lang="it">Ruota immagine jpeg di 90 gradi in senso antiorario</description>
-    <description xml:lang="ja">jpeg画像を90度反時計回りに回転させます。</description>
-    <description xml:lang="nl">Draai een jpeg bestand 90 graden tegen de klok in</description>
-    <description xml:lang="pt_BR">Rodar imagem jpeg 90 graus sentido anti-horário</description>
-    <description xml:lang="pt_PT">Rodar imagem jpeg 90 graus sentido anti-horário</description>
-    <description xml:lang="sv">Rotera jpeg bilden 90 grader moturs</description>
+    <description>Rotate JPEG image 90 degrees counter-clockwise</description>
+    <description xml:lang="ca">Girar imatge JPEG de 90 graus cap a l'esquerra</description>
+    <description xml:lang="de">Ein JPEG-Bild gegen den Uhrzeigersinn drehen</description>
+    <description xml:lang="es">Girar imagen JPEG de 90 grados hacia la izquierda</description>
+    <description xml:lang="fr">Fait pivoter un fichier JPEG de 90 degrés dans le sens anti-horaire</description>
+    <description xml:lang="it">Ruota immagine JPEG di 90 gradi in senso antiorario</description>
+    <description xml:lang="ja">JPEG 画像を90度反時計回りに回転させます。</description>
+    <description xml:lang="nl">Draai een JPEG bestand 90 graden tegen de klok in</description>
+    <description xml:lang="pt">Rodar imagem JPEG 90 graus no sentido anti-horário</description>
+    <description xml:lang="ru">Повернуть JPEG-изображение на 90 градусов против часовой стрелки</description>
+    <description xml:lang="sv">Rotera JPEG bilden 90 grader till vänster</description>
     <patterns>*.jpg;*.JPG;*.jpeg;*.JPEG</patterns>
     <image-files/>
   </action>
@@ -382,116 +439,243 @@
     <name>ImgMergeHor</name>
     <command>convert +append %F joined-horizontal.png</command>
     <description>Glue images horizontally</description>
+    <description xml:lang="de">Bilder horizontal aneinanderkleben</description>
+    <description xml:lang="es">Unir imágenes horizontalmente</description>
+    <description xml:lang="fr">Joindre des images à la horizontale</description>
+    <description xml:lang="it">Unire le immagini in orizzontale</description>
+    <description xml:lang="ja">画像を縦につなげる。</description>
+    <description xml:lang="nl">Afbeeldingen horizontaal samenvoegen</description>
+    <description xml:lang="pt">Unir imagens na horizontal</description>
+    <description xml:lang="ru">Объединить изображения по горизонтали</description>
+    <description xml:lang="sv">Sammanfoga bilder horisontellt</description>
     <patterns>*</patterns>
     <image-files/>
   </action>
   <action>
-      <icon>arrow-down-double</icon>
-      <name>ImgMergeVer</name>
-      <command>convert -append %F joined-vertical.png</command>
-      <description>Glue images vertically</description>
-      <patterns>*</patterns>
-      <image-files/>
+    <icon>arrow-down-double</icon>
+    <name>ImgMergeVer</name>
+    <command>convert -append %F joined-vertical.png</command>
+    <description>Glue images vertically</description>
+    <description xml:lang="de">Bilder vertikal aneinanderkleben</description>
+    <description xml:lang="es">Unir imágenes verticalmente</description>
+    <description xml:lang="fr">Joindre des images à la verticale</description>
+    <description xml:lang="it">Unire le immagini in orizzontale</description>
+    <description xml:lang="ja">画像を横方向に結合する。</description>
+    <description xml:lang="nl">Afbeeldingen verticaal samenvoegen</description>
+    <description xml:lang="pt">Unir imagens na vertical</description>
+    <description xml:lang="ru">Объединить изображения по вертикали</description>
+    <description xml:lang="sv">Sammanfoga bilder vertikalt</description>
+    <patterns>*</patterns>
+    <image-files/>
   </action>
   <action>
-      <icon>emblem-photos</icon>
-      <name>Show photo metadata</name>
-      <command>exiftool %N | zenity --text-info --title=&quot;Exif data&quot; --width=600 --height=800</command>
-      <description>Show jpeg metadata</description>
-      <patterns>*</patterns>
-      <image-files/>
+    <icon>data-information</icon>
+    <name>Show metadata</name>
+    <name xml:lang="de">Metadaten anzeigen</name>
+    <name xml:lang="es">Mostrar metadatos</name>
+    <name xml:lang="fr">Afficher les métadonnées</name>
+    <name xml:lang="it">Mostra metadati</name>
+    <name xml:lang="nl">Metadata weergeven</name>
+    <name xml:lang="pt">Mostrar metadados</name>
+    <name xml:lang="ru">Показать метаданные </name>
+    <name xml:lang="sv">Visa metadata</name>
+    <command>exiftool -a -u %N | zenity --text-info --title=&quot;EXIF Tool&quot; --width=600 --height=800</command>
+    <description>Show metadata in supported file types (https://exiftool.org/#supported)</description>
+    <description xml:lang="de">Metadaten anzeigen in unterstützten Dateitypen (https://exiftool.org/#supported)</description>
+    <description xml:lang="es">Mostrar metadatos en tipos de archivo compatibles (https://exiftool.org/#supported)</description>
+    <description xml:lang="fr">Afficher les métadonnées dans les types de fichiers supportés (https://exiftool.org/#supported)</description>
+    <description xml:lang="it">Mostra i metadati nei tipi di file supportati (https://exiftool.org/#supported)</description>
+    <description xml:lang="nl">Toon metadata in ondersteunde bestandstypen (https://exiftool.org/#supported)</description>
+    <description xml:lang="pt">Mostrar metadados em tipos de ficheiros suportados (https://exiftool.org/#supported)</description>
+    <description xml:lang="ru">Показать метаданные в поддерживаемых типах файлов (https://exiftool.org/#supported)</description>
+    <description xml:lang="sv">Visa metadata i filtyper som stöds (https://exiftool.org/#supported)</description>
+    <patterns>*</patterns>
+	  <audio-files/>
+	  <image-files/>
+	  <other-files/>
+	  <text-files/>
+  	<video-files/>
   </action>
   <action>
-      <icon>emblem-photos</icon>
-      <name>Strip exif data</name>
-      <command>jhead -purejpg %f</command>
-      <description>Delete all exif data in jpg photos</description>
-      <patterns>*.jpg;*.JPG;*.jpeg;*.JPEG</patterns>
-      <image-files/>
+    <icon>emblem-photos</icon>
+    <name>Strip metadata</name>
+    <name xml:lang="de">Metadaten entfernen</name>
+    <name xml:lang="es">Eliminar metadatos</name>
+    <name xml:lang="fr">Supprimer les métadonnées</name>
+    <name xml:lang="it">Rimuovere i metadati</name>
+    <name xml:lang="nl">Metadata verwijderen</name>
+    <name xml:lang="pt">Remover metadados</name>
+    <name xml:lang="ru">Удалить метаданные</name>
+    <name xml:lang="sv">Ta bort metadata</name>
+    <command>jhead -purejpg %f</command>
+    <description>Delete all exif data in JPG photos</description>
+    <description xml:lang="de">Exif-Daten in JPG Fotos entfernen</description>
+    <description xml:lang="es">Eliminar todos los datos exif en fotos JPEG </description>
+    <description xml:lang="fr">Supprimer toutes les données exif des photos JPEG</description>
+    <description xml:lang="it">Elimina tutti i dati exif nelle foto JPEG</description>
+    <description xml:lang="nl">Alle exif-gegevens in JPEG-foto's verwijderen</description>
+    <description xml:lang="pt">Eliminar todos os dados exif em fotografias JPEG</description>
+    <description xml:lang="ru">Удалить все данные exif в фотографиях JPEG</description>
+    <description xml:lang="sv">Ta bort alla exif-data i JPEG-bilder</description>
+    <patterns>*.jpg;*.JPG;*.jpeg;*.JPEG</patterns>
+    <image-files/>
   </action>
   <action>
-      <icon>application-x-desktop</icon>
-      <name>Media File Metadata</name>
-      <command>mediainfo %N | zenity --text-info --title=&quot;Media Info&quot; --width=600 --height=800</command>
-      <description>Grabs info from a media (audio/video) file</description>
-      <patterns>*</patterns>
-      <audio-files/>
-      <image-files/>
-      <other-files/>
-      <video-files/>
+    <icon>data-information</icon>
+    <name>Media file metadata</name>
+    <name xml:lang="de">Media Metadaten</name>
+    <name xml:lang="es">Metadatos de archivos multimedia</name>
+    <name xml:lang="fr">Métadonnées des fichiers multimédias</name>
+    <name xml:lang="it">Metadati dei file multimediali</name>
+    <name xml:lang="nl">Metadata van mediabestanden</name>
+    <name xml:lang="pt">Metadados de ficheiros multimédia</name>
+    <name xml:lang="ru">Метаданные медиафайла</name>
+    <name xml:lang="sv">Metadata för mediefiler</name>
+    <command>mediainfo %N | zenity --text-info --title=&quot;Media Info&quot; --width=600 --height=800</command>
+    <description>Show info from a media (audio/video) file</description>
+    <description xml:lang="de">Media Metadaten aus Audio/Video-Dateien anzeigen</description>
+    <description xml:lang="es">Mostrar información de un archivo multimedia (audio/vídeo)</description>
+    <description xml:lang="fr">Afficher les informations d'un fichier multimédia (audio/vidéo)</description>
+    <description xml:lang="it">Mostra informazioni da un file multimediale (audio/video)</description>
+    <description xml:lang="nl">Info van een mediabestand (audio/video) weergeven</description>
+    <description xml:lang="pt">Mostrar informações de um ficheiro multimédia (áudio/vídeo)</description>
+    <description xml:lang="ru">Показать информацию из медиафайла (аудио/видео)</description>
+    <description xml:lang="sv">Visa information från en mediafil (ljud/video)</description>
+    <patterns>*</patterns>
+    <audio-files/>
+    <image-files/>
+    <other-files/>
+    <video-files/>
   </action>
   <action>
-      <icon>audio-ac3</icon>
-      <name>Extract AAC Audio - without container</name>
-      <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -map 0:a -c:a copy &quot;${0%%.*}&quot;.aac&apos; %F</command>
-      <description>Extract as .aac - change map if you get wrong stream</description>
-      <patterns>*</patterns>
-      <audio-files/>
-      <video-files/>
+    <icon>audio-ac3</icon>
+    <name>Extract AAC Audio</name>
+    <name xml:lang="de">AAC Audio extrahieren</name>
+    <name xml:lang="es">Extraer audio AAC</name>
+    <name xml:lang="fr">Extraire AAC audio</name>
+    <name xml:lang="it">Estrarre come AAC</name>
+    <name xml:lang="nl">Audio extraheren AAC</name>
+    <name xml:lang="pt">Extrair áudio AAC</name>
+    <name xml:lang="ru">Извлечь аудио AAC</name>
+    <name xml:lang="sv">Extrahera ljud AAC</name>
+    <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -map 0:a -c:a copy &quot;${0%%.*}&quot;.aac&apos; %F</command>
+    <description>Extract without container - change map if you get wrong stream</description>
+    <description xml:lang="de">Audio ohne Container extrahieren - map ändern, wenn es der falsche Stream ist</description>
+    <description xml:lang="es">Extraer sin contenedor - cambiar "map" si se obtiene un flujo incorrecto</description>
+    <description xml:lang="fr">Extraire sans conteneur, changer "map" si vous obtenez un flux erroné</description>
+    <description xml:lang="it">Estrarre senza contenitore - cambiare "map" se si ottiene un flusso sbagliato</description>
+    <description xml:lang="nl">Extraheren zonder container - wijzig "map" als je de verkeerde stream krijgt</description>
+    <description xml:lang="pt">Extrair sem contentor - altere o "map" se obtiver um fluxo errado</description>
+    <description xml:lang="ru">Извлечение без контейнера - измените map, если вы получили неправильный поток</description>
+    <description xml:lang="sv">Extrahera utan behållare - ändra "map" om du får fel ström</description>
+    <patterns>*</patterns>
+    <audio-files/>
+    <video-files/>
   </action>
   <action>
-      <icon>audio-x-flac+ogg</icon>
-      <name>Extract OPUS Audio from WEBM</name>
-      <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -vn -c:a copy &quot;${0%%.*}&quot;.opus&apos; %F</command>
-      <description>Change into OPUS own container format OGG</description>
-      <patterns>*</patterns>
-      <audio-files/>
-      <video-files/>
+    <icon>audio-ac3</icon>
+    <name>Extract M4A audio</name>
+    <name xml:lang="de">M4A Audio extrahieren</name>
+    <name xml:lang="es">Extraer audio M4A</name>
+    <name xml:lang="fr">Extraire M4A audio</name>
+    <name xml:lang="it">Estrarre come M4A</name>
+    <name xml:lang="nl">Audio extraheren M4A</name>
+    <name xml:lang="pt">Extrair áudio M4A</name>
+    <name xml:lang="ru">Извлечь аудио M4A</name>
+    <name xml:lang="sv">Extrahera ljud M4A</name>
+    <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -map 0:a -c:a copy &quot;${0%%.*}&quot;.m4a&apos; %F</command>
+    <description>Extract as m4a - change map if you get wrong stream</description>
+    <description xml:lang="de">M4A Audio extrahieren - map ändern, wenn es der falsche Stream ist</description>
+    <description xml:lang="es">Extraer como m4a - cambiar "mapa" si se obtiene un flujo incorrecto</description>
+    <description xml:lang="fr">Extraire en m4a, changer "map" si vous obtenez un flux erroné</description>
+    <description xml:lang="it">Estrarre come m4a - cambiare "map" se si ottiene un flusso sbagliato</description>
+    <description xml:lang="nl">Extraheer als m4a - verander "map" als je de verkeerde stream krijgt</description>
+    <description xml:lang="pt">Extrair como m4a - alterar o "map" se o fluxo estiver errado</description>
+    <description xml:lang="ru">Извлечь в формат m4a - измените map, если вы получили неправильный поток</description>
+    <description xml:lang="sv">Extrahera som m4a - ändra "map" om du får fel ström</description>
+    <patterns>*.flv;*.mp4;*.avi</patterns>
+    <audio-files/>
+    <video-files/>
   </action>
   <action>
-      <icon>audio-ac3</icon>
-      <name>Extract M4A Audio</name>
-      <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -map 0:a -c:a copy &quot;${0%%.*}&quot;.m4a&apos; %F</command>
-      <description>Extract as m4a, change map if you get wrong stream</description>
-      <patterns>*.flv;*.mp4;*.avi</patterns>
-      <audio-files/>
-      <video-files/>
+    <icon>media-optical-audio</icon>
+    <name>Extract MP3 Audio</name>
+    <name xml:lang="de">MP3 Audio extrahieren</name>
+    <name xml:lang="es">Extraer audio MP3</name>
+    <name xml:lang="fr">Extraire MP3 audio</name>
+    <name xml:lang="it">Estrarre come MP3</name>
+    <name xml:lang="nl">Audio extraheren MP3</name>
+    <name xml:lang="pt">Extrair áudio MP3</name>
+    <name xml:lang="ru">Извлечь аудио MP3</name>
+    <name xml:lang="sv">Extrahera ljud MP3</name>
+    <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -q:a 0 -map a &quot;${0%%.*}&quot;.mp3&apos; %F</command>
+    <description>Extract as MP3 if M4A does not work</description>
+    <description xml:lang="de">M4A Audio extrahieren, wenn M4A nicht funktioniert</description>
+    <description xml:lang="es">Extraer como MP3 si M4A no funciona</description>
+    <description xml:lang="fr">Extraire audio en MP3 si M4A ne fonctionne pas</description>
+    <description xml:lang="it">Estrarre come MP3 se M4A non funziona</description>
+    <description xml:lang="nl">Extraheer als MP3 als M4A niet werkt</description>
+    <description xml:lang="pt">Extrair como MP3 se M4A não funcionar</description>
+    <description xml:lang="ru">Извлечь в MP3, если M4A не работает</description>
+    <description xml:lang="sv">Extrahera som MP3 om M4A inte fungerar</description>
+    <patterns>*</patterns>
+    <audio-files/>
+    <video-files/>
   </action>
   <action>
-      <icon>media-optical-audio</icon>
-      <name>Extract MP3 Audio</name>
-      <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -q:a 0 -map a &quot;${0%%.*}&quot;.mp3&apos; %F</command>
-      <description>Extract as MP3 if M4A doesn&apos;t work</description>
-      <patterns>*</patterns>
-      <audio-files/>
-      <video-files/>
+    <icon>audio-x-flac+ogg</icon>
+    <name>Extract OPUS audio from WEBM</name>
+    <name xml:lang="de">OPUS Audio aus WEBM extrahieren</name>
+    <name xml:lang="es">Extraer audio OPUS de WEBM</name>
+    <name xml:lang="fr">Extraire OPUS de WEBM</name>
+    <name xml:lang="it">Estrarre OPUS da WEBM</name>
+    <name xml:lang="nl">OPUS audio extraheren uit WEBM</name>
+    <name xml:lang="pt">Extrair áudio OPUS de WEBM</name>
+    <name xml:lang="ru">Извлечь аудио OPUS из WEBM</name>
+    <name xml:lang="sv">Extrahera ljud OPUS från WEBM</name>
+    <command>bash -c &apos;ffmpeg -i &quot;$0&quot; -vn -c:a copy &quot;${0%%.*}&quot;.opus&apos; %F</command>
+    <description>Convert into OPUS own container format OGG</description>
+    <description xml:lang="de">OPUS Audio in das richtige Containerformat OGG konvertieren</description>
+    <description xml:lang="es">Convertir a formato contenedor propio de OPUS OGG</description>
+    <description xml:lang="fr">Convertir en OGG, le format de conteneur propre à OPUS</description>
+    <description xml:lang="it">Convertire in formato contenitore OPUS OGG</description>
+    <description xml:lang="nl">Converteren naar OPUS eigen containerformaat OGG</description>
+    <description xml:lang="pt">Converter para OGG, o formato de contentor próprio do OPUS</description>
+    <description xml:lang="ru">Конвертировать в собственный формат контейнера OPUS OGG </description>
+    <description xml:lang="sv">Konvertera till OPUS eget containerformat OGG </description>
+    <patterns>*</patterns>
+    <audio-files/>
+    <video-files/>
   </action>
   <action>
-      <icon>application-pdf</icon>
-      <name>Show PDF metadata</name>
-      <command>exiftool %N | zenity --text-info --title=&quot;PDF Toolkit&quot; --width=600 --height=800</command>
-      <description>Show PDF metadata</description>
-      <patterns>*.pdf</patterns>
-      <other-files/>
-  </action>
-  <action>
-      <icon>xpdf</icon>
-      <name>Strip PDF</name>
-      <command>exiftool -all:all=  -overwrite_original %f &amp;&amp; qpdf --linearize %f stripped.pdf</command>
-      <description>Permanently strip PDF metadata</description>
-      <patterns>*.pdf</patterns>
-      <other-files/>
-  </action>
-  <action>
-      <icon>accessories-dictionary</icon>
-      <name>PDF title</name>
-      <command>exiftool -Title=&quot; &quot; %N | zenity --entry --title=&quot;Change title tag&quot; --text=&quot;New title:&quot; --entry-text=&quot; &quot;</command>
-      <description>Edit PDF title tag</description>
-      <patterns>*.pdf</patterns>
-      <other-files/>
-  </action>
-  <action>
-      <icon></icon>
-      <name>PDF author</name>
-      <command>exiftool -Author=&quot; &quot; %N | zenity --entry --title=&quot;Change author tag&quot; --text=&quot;New author:&quot; --entry-text=&quot; &quot;</command>
-      <description>Edit PDF author tag</description>
-      <patterns>*.pdf</patterns>
-      <other-files/>
+    <icon>xpdf</icon>
+    <name>Strip PDF metadata</name>
+    <name xml:lang="de">PDF Metadaten entfernen</name>
+    <name xml:lang="es">Eliminar metadatos PDF</name>
+    <name xml:lang="fr">Suppression des métadonnées PDF</name>
+    <name xml:lang="it">Rimuovere i metadati PDF</name>
+    <name xml:lang="nl">PDF-metadata verwijderen</name>
+    <name xml:lang="pt">Remover metadados de PDF</name>
+    <name xml:lang="ru">Удаление метаданных PDF</name>
+    <name xml:lang="sv">Ta bort PDF-metadata</name>
+    <command>exiftool -all:all=  -overwrite_original %f &amp;&amp; qpdf --linearize %f stripped.pdf</command>
+    <description>Permanently remove PDF metadata</description>
+    <description xml:lang="de">Metadaten aus PDF dauerhaft entfernen</description>
+    <description xml:lang="es">Eliminar permanentemente los metadatos PDF</description>
+    <description xml:lang="fr">Supprimer définitivement les métadonnées du PDF</description>
+    <description xml:lang="it">Rimuove permanentemente i metadati PDF</description>
+    <description xml:lang="nl">PDF-metadata permanent verwijderen</description>
+    <description xml:lang="pt">Remover permanentemente os metadados do PDF</description>
+    <description xml:lang="ru">Постоянное удаление метаданных PDF</description>
+    <description xml:lang="sv">Ta bort PDF-metadata</description>
+    <patterns>*.pdf</patterns>
+    <other-files/>
   </action>
   <action>
     <icon>document-print</icon>
     <name>Print File</name>
     <name xml:lang="ca">Imprimeix fitxer</name>
+    <name xml:lang="de">Datei drucken</name>
     <name xml:lang="es">Imprimir archivo</name>
     <name xml:lang="fr">Imprimer Fichier</name>
     <name xml:lang="it">Stampa file</name>
@@ -499,10 +683,12 @@
     <name xml:lang="nl">Bestand afdrukken</name>
     <name xml:lang="pt_BR">Imprimir arquivo</name>
     <name xml:lang="pt_PT">Imprimir Ficheiro</name>
+    <name xml:lang="ru">Печать файла</name>
     <name xml:lang="sv">Skriv ut filen</name>
     <command>lp %f</command>
     <description>Prints the selected file</description>
     <description xml:lang="ca">Imprimeix el fitxer seleccionat</description>
+    <description xml:lang="de">Die gewählte Datei drucken</description>
     <description xml:lang="es">Imprime el archivo seleccionado</description>
     <description xml:lang="fr">Imprime le fichier sélectionné</description>
     <description xml:lang="it">Stampa il file selezionato</description>
@@ -510,6 +696,7 @@
     <description xml:lang="nl">Druk het geselecteerde bestand af</description>
     <description xml:lang="pt_PT">Imprime o ficheiro seleccionado</description>
     <description xml:lang="pt_BR">Imprime o arquivo selecionado</description>
+    <description xml:lang="ru">Печать выбранного файла</description>
     <description xml:lang="sv">Skriver ut den markerade filen</description>
     <patterns>*</patterns>
     <text-files/>
@@ -518,17 +705,19 @@
     <icon>edit-find</icon>
     <name>Search</name>
     <name xml:lang="ca">Cerca</name>
+    <name xml:lang="de">Suche</name>
     <name xml:lang="es">Buscar</name>
     <name xml:lang="fr">Rechercher</name>
     <name xml:lang="it">Cerca</name>
     <name xml:lang="ja">検索</name>
     <name xml:lang="nl">Zoeken</name>
-    <name xml:lang="pt_BR">Procurar</name>
-    <name xml:lang="pt_PT">Procura</name>
+    <name xml:lang="pt">Procurar</name>
+    <name xml:lang="ru">Поиск</name>
     <name xml:lang="sv">Sök</name>
     <command>catfish %f</command>
     <description>Search this folder for files using Catfish</description>
     <description xml:lang="ca">Cerca fitxers al directori fent servir Catfish</description>
+    <description xml:lang="de">Durchsuche diesen Ordner mithilfe von Catfish</description>
     <description xml:lang="es">Buscar archivos en esta carpeta mediante Catfish</description>
     <description xml:lang="fr">Recherche des fichiers dans ce répertoire avec Catfish</description>
     <description xml:lang="it">Cerca dei file in questa cartella usando Catfish</description>
@@ -536,6 +725,7 @@
     <description xml:lang="nl">Zoek in deze map naar bestanden met Catfish</description>
     <description xml:lang="pt_BR">Procura por arquivos nesta pasta usando o Catfish</description>
     <description xml:lang="pt_PT">Procura nesta pasta por ficheiros que usem Catfish</description>
+    <description xml:lang="ru">Поиск файлов в этой папке с помощью Catfish</description>
     <description xml:lang="sv">Sök efter filer i den här mappen med Catfish</description>
     <patterns>*</patterns>
     <directories/>
@@ -555,8 +745,8 @@
     <name xml:lang="ko">.ttf 폰트 설치</name>
     <name xml:lang="nl">Installeer .ttf lettertype</name>
     <name xml:lang="pl">Instalacja czcionki .ttf</name>
-    <name xml:lang="pt_BR">Install .ttf font</name>
-    <name xml:lang="pt_PT">Instalar fontes .ttf</name>
+    <name xml:lang="pt">Instalar fontes .ttf</name>
+    <name xml:lang="ru">Установить .ttf шрифт</name>
     <name xml:lang="sk">Inštalovať .ttf písmo</name>
     <name xml:lang="sv">Installera .ttf typsnitt</name>
     <name xml:lang="tr">.ttf fontu yükle</name>
@@ -574,8 +764,8 @@
     <description xml:lang="ko">.ttf 파일을 사용자 폰트나 시스템 폰트로 설치합니다</description>
     <description xml:lang="nl">Installeert .ttf lettertypes voor de gebruiker of het systeem</description>
     <description xml:lang="pl">Zainstaluj czcionki .ttf dla użytkownika lub systemu</description>
-    <description xml:lang="pt_BR">Instalar fonte .ttf</description>
-    <description xml:lang="pt_PT">Instalar fontes .ttf para o utilizador ou sistema</description>
+    <description xml:lang="pt">Instalar fontes .ttf para o utilizador ou sistema</description>
+    <description xml:lang="ru">Устанавливает шрифты .ttf для пользователя или системы</description>
     <description xml:lang="sk">Inštalovať .ttf písma pre užívateľa alebo systém</description>
     <description xml:lang="sv">Installerar .ttf typsnitt på användarnivå eller på systemnivå</description>
     <description xml:lang="tr">Kullanıcı veya sistem için .ttf fontları yükler</description>
@@ -585,25 +775,73 @@
   <action>
     <icon>folder-remote</icon>
     <name>Samba public read-only</name>
+    <name xml:lang="de">Samba öffentlich nur lesen</name>
+    <name xml:lang="es">Samba público de sólo lectura</name>
+    <name xml:lang="fr">Samba public en lecture seule</name>
+    <name xml:lang="it">Samba pubblico di sola lettura</name>
+    <name xml:lang="nl">Samba openbaar alleen-lezen</name>
+    <name xml:lang="pt">Samba público só de leitura</name>
+    <name xml:lang="ru">Samba публика для чтения</name>
+    <name xml:lang="sv">Samba offentlig skrivskyddad</name>
     <command>net usershare add %n %f &quot;&quot; Everyone:R guest_ok=y</command>
     <description>Create a public read only samba share</description>
+    <description xml:lang="de">Öffentlich lesbare Samba-Freigabe erstellen</description>
+    <description xml:lang="es">Crea un recurso compartido samba público de sólo lectura</description>
+    <description xml:lang="fr">Créer un partage Samba public en lecture seule</description>
+    <description xml:lang="it">Crea una condivisione samba pubblica di sola lettura</description>
+    <description xml:lang="nl">Een openbare alleen-lezen Samba-partitie maken</description>
+    <description xml:lang="pt">Criar uma partilha samba pública só de leitura </description>
+    <description xml:lang="ru">Создание публика ресурса samba только для чтения</description>
+    <description xml:lang="sv">Skapa en offentlig skrivskyddad Samba-delning</description>
     <patterns>*</patterns>
     <directories/>
   </action>
   <action>
-      <icon>folder-remote</icon>
-      <name>Samba public writeable</name>
-      <command>net usershare add %n %f &quot;&quot; Everyone:F guest_ok=y &amp;&amp; chmod 777 %f</command>
-      <description>Create a public writeable samba share</description>
-      <patterns>*</patterns>
-      <directories/>
+    <icon>folder-remote</icon>
+    <name>Samba public writeable</name>
+    <name xml:lang="de">Samba öffentlich schreibbar</name>
+    <name xml:lang="es">Samba público de escritura</name>
+    <name xml:lang="fr">Samba public en écriture</name>
+    <name xml:lang="it">Samba pubblico scrivibile</name>
+    <name xml:lang="nl">Samba openbaar beschrijfbaar</name>
+    <name xml:lang="pt">Samba público gravável</name>
+    <name xml:lang="ru">Samba публика для записи</name>
+    <name xml:lang="sv">Samba offentlig skrivbar</name>
+    <command>net usershare add %n %f &quot;&quot; Everyone:F guest_ok=y &amp;&amp; chmod 777 %f</command>
+    <description>Create a public writeable samba share</description>
+    <description xml:lang="de">Öffentlich schreibbare Samba-Freigabe erstellen</description>
+    <description xml:lang="es">Crea un recurso compartido samba público de escritura</description>
+    <description xml:lang="fr">Créer un partage Samba public en écriture</description>
+    <description xml:lang="it">Crea una condivisione samba pubblica scrivibile</description>
+    <description xml:lang="nl">Een openbare beschrijfbare Samba-partitie aanmaken</description>
+    <description xml:lang="pt">Criar uma partilha samba pública gravável</description>
+    <description xml:lang="ru">Создание публика ресурса samba для записи</description>
+    <description xml:lang="sv">Skapa en offentlig skrivbar Samba-delning</description>
+    <patterns>*</patterns>
+    <directories/>
   </action>
   <action>
-      <icon>folder-remote</icon>
-      <name>Samba remove share</name>
-      <command>net usershare delete %n &amp;&amp; chmod 755 %f</command>
-      <description>Remove a samba share</description>
-      <patterns>*</patterns>
-      <directories/>
+    <icon>folder-remote</icon>
+    <name>Samba remove share</name>
+    <name xml:lang="de">Samba-Verzeichnis entfernen</name>
+    <name xml:lang="es">Eliminar recurso compartido Samba</name>
+    <name xml:lang="fr">Supprimer un partage Samba</name>
+    <name xml:lang="it">Rimuove una condivisione samba</name>
+    <name xml:lang="nl">Samba-share verwijderen</name>
+    <name xml:lang="pt">Remover uma partilha samba</name>
+    <name xml:lang="ru">Удалить общий ресурс samba</name>
+    <name xml:lang="sv">Ta bort Samba-delning</name>
+    <command>net usershare delete %n &amp;&amp; chmod 755 %f</command>
+    <description>Remove a samba share</description>
+    <description xml:lang="de">Samba-Freigabe entfernen</description>
+    <description xml:lang="es">Eliminar recurso compartido Samba</description>
+    <description xml:lang="fr">Supprimer un partage Samba</description>
+    <description xml:lang="it">Rimuove una condivisione samba</description>
+    <description xml:lang="nl">Een samba-partitie verwijderen</description>
+    <description xml:lang="pt">Remover uma partilha samba</description>
+    <description xml:lang="ru">Удалить общий ресурс Samba</description>
+    <description xml:lang="sv">Ta bort Samba-delning</description>
+    <patterns>*</patterns>
+    <directories/>
   </action>
 </actions>
