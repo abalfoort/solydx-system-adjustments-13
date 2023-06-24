@@ -1,3 +1,10 @@
+solydx-system-adjustments-13 (1.0.7) stable; urgency=low
+
+  * Add Grub SolydK light theme (default)
+    Check /etc/default/grub for configuration
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Thu, 22 Jun 2023 17:30:43 +0200
+
 solydx-system-adjustments-13 (1.0.6) stable; urgency=low
 
   * Updated uca.xml
