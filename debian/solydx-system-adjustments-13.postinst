@@ -120,22 +120,30 @@ case "$1" in
     # Change Grub2 Theme
     UPDGRUB=false
     DEFGRUB='/etc/default/grub'
+    GRUBTHEMES='/boot/grub/themes'
     if [ -f "$DEFGRUB" ]; then
+      UPDGRUB=true
+
+      # Set Grub theme
       if grep -q '^GRUB_THEME=' $DEFGRUB; then
-        sed -i 's|^GRUB_THEME=.*|GRUB_THEME=/boot/grub/themes/solydxk/theme.txt|' $DEFGRUB
-        UPDGRUB=true
+        if $(grep -qs "/solydxk/theme.txt" $DEFGRUB); then
+          # Keep the dark theme for upgrade users
+          sed -i 's|# Set theme|# Check available themes in /boot/grub/themes|' $DEFGRUB
+          sed -i 's|^GRUB_THEME=.*|GRUB_THEME=/boot/grub/themes/solydxk-dark/theme.txt|' $DEFGRUB
+        fi
       else
         if ! grep -q 'GRUB_THEME=' $DEFGRUB; then
           # Only append if GRUB_THEME= is not in DEFGRUB
-          echo -e '\n# Set theme\nGRUB_THEME=/boot/grub/themes/solydxk/theme.txt' >> $DEFGRUB
-          UPDGRUB=true
+          echo -e '\n# Check available themes in /boot/grub/themes\nGRUB_THEME=/boot/grub/themes/solydxk-light/theme.txt' >> $DEFGRUB
         fi
       fi
 
-      if ! grep -q 'GRUB_DISABLE_OS_PROBER=' $DEFGRUB; then
-        # Only append if GRUB_THEME= is not in DEFGRUB
+      # Enable os-prober
+      if grep -q 'GRUB_DISABLE_OS_PROBER=' $DEFGRUB; then
+        sed -i 's|# GRUB_DISABLE_OS_PROBER|GRUB_DISABLE_OS_PROBER|' $DEFGRUB
+      else
+        # Only append if GRUB_DISABLE_OS_PROBER= is not in DEFGRUB
         echo -e '\n# Disable os-prober\nGRUB_DISABLE_OS_PROBER=false' >> $DEFGRUB
-        UPDGRUB=true
       fi
     fi
 
