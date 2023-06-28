@@ -23,7 +23,7 @@ terminal-border: "0"
         width = 100%
         font = "Unifont Regular 16"
         text_color = "#ffe6c8"
-        fg_color = "#b5651a"
+        fg_color = "#ff8f25"
         bg_color = "#ff9b3c"
         border_color = "#ff9b3c"
         text = "@TIMEOUT_NOTIFICATION_MIDDLE@"
