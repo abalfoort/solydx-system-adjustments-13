@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=SolydX Light Static
+Description=SolydX Light Plymouth Theme - Static Image.
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/solydx-light-static
+ScriptFile=/usr/share/plymouth/themes/solydx-light-static/solydx-light-static.script

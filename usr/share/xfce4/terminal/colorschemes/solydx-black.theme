@@ -1,0 +1,6 @@
+[Scheme]
+Name=SolydX Black
+ColorForeground=#ffffff
+ColorBackground=#141517
+ColorPalette=rgb(70,70,70);rgb(178,24,24);rgb(16,124,16);rgb(201,101,0);rgb(24,24,178);rgb(135,18,135);rgb(18,140,140);rgb(160,160,160);rgb(104,104,104);rgb(255,84,84);rgb(0,192,0);rgb(255,128,0);rgb(73,117,174);rgb(176,58,176);rgb(0,192,192);rgb(195,195,195)
+ColorCursor=#f5f579790000

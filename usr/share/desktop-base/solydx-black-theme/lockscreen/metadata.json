@@ -1,0 +1,14 @@
+{
+    "KPlugin": {
+        "Name": "SolydX Black",
+        "Id": "solydx-black",
+        "License": "GPLv2+",
+        "Authors": [
+            {
+                "Name": "Arjen Balfoort",
+                "Email": "arjenbalfoort@hotmail.com"
+            }
+        ]
+    }
+}
+
