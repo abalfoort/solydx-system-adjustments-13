@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.1.1) stable; urgency=low
+
+  * Fix postrm
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Sun, 16 Jul 2023 17:24:56 +0200
+
 solydx-system-adjustments-13 (1.1.0) stable; urgency=low
 
   * Updated graphics
