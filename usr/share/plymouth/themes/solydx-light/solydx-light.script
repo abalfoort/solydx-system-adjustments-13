@@ -2,8 +2,8 @@
 # https://freedesktop.org/wiki/Software/Plymouth/Scripts/
 
 # RGB / 256
-Window.SetBackgroundTopColor (1.00, 0.61, 0.24);
-Window.SetBackgroundBottomColor (1.00, 0.61, 0.24);
+Window.SetBackgroundTopColor (1.00, 0.75, 0.51);
+Window.SetBackgroundBottomColor (1.00, 0.75, 0.51);
 
 # Load the images
 bg.image = Image("plymouth-bg.png");

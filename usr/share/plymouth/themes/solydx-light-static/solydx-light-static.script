@@ -1,8 +1,8 @@
 # SolydX Light Static Plymouth theme script
 
 # RGB / 256
-Window.SetBackgroundTopColor (1.00, 0.61, 0.24);
-Window.SetBackgroundBottomColor (1.00, 0.61, 0.24);
+Window.SetBackgroundTopColor (1.00, 0.75, 0.51);
+Window.SetBackgroundBottomColor (1.00, 0.75, 0.51);
 
 bg.image = Image("bg.png");
 bg.sprite = Sprite(bg.image);

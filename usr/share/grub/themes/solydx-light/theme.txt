@@ -26,9 +26,9 @@ terminal-border: "0"
         width = 100%
         font = "Unifont Regular 20"
         text_color = "#603000"
-        fg_color = "#f98c24"
-        bg_color = "#ff9b3c"
-        border_color = "#ff9b3c"
+        fg_color = "#feb674"
+        bg_color = "#ffc58e"
+        border_color = "#ffc58e"
         text = "Use the ↑ and ↓ keys to select, 'e' to edit or 'c' for the command-line."
 }
 
