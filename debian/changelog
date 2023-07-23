@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.1.5) stable; urgency=low
+
+  * Move postinst code to iso-constructor
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Sat, 22 Jul 2023 14:35:54 +0200
+
 solydx-system-adjustments-13 (1.1.4) stable; urgency=low
 
   * Plymouth logo not transparent
