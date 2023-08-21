@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.1.6) stable; urgency=low
+
+  * Plymouth theme smaller password character (bullet.png)
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 21 Aug 2023 12:03:52 +0200
+
 solydx-system-adjustments-13 (1.1.5) stable; urgency=low
 
   * Move postinst code to iso-constructor
