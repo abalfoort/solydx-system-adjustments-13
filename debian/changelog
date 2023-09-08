@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.1.7) stable; urgency=low
+
+  * Add clipman to the default panel
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Fri, 08 Sep 2023 14:21:21 +0200
+
 solydx-system-adjustments-13 (1.1.6) stable; urgency=low
 
   * Plymouth theme smaller password character (bullet.png)
