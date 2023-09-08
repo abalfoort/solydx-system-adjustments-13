@@ -28,6 +28,7 @@
         <value type="int" value="4"/>
         <value type="int" value="8"/>
         <value type="int" value="10"/>
+        <value type="int" value="11"/>
         <value type="int" value="7"/>
         <value type="int" value="5"/>
         <value type="int" value="1"/>
@@ -66,6 +67,7 @@
         <value type="string" value="networkmanager applet"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="firewall-applet"/>
         <value type="string" value="org.guido-berhoerster.code.package-update-indicator"/>
       </property>
     </property>
@@ -81,6 +83,7 @@
       <property name="digital-layout" type="uint" value="3"/>
       <property name="digital-time-font" type="string" value="Clear Sans 12"/>
     </property>
+    <property name="plugin-11" type="string" value="xfce4-clipman-plugin"/>
   </property>
   <property name="configver" type="int" value="2"/>
 </channel>
