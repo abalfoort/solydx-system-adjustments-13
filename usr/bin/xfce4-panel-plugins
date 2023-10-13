@@ -101,7 +101,7 @@ if (( NRADDED > 0 )); then
     PLUGINBEFOREID=$(xfconf-query -c xfce4-panel -l -v | grep $PLUGINBEFORE | awk '{print $1}' | grep -oP '[0-9]+$')
     echo "Re-order panel plugins: move added plugins before $PLUGINBEFORE (ID=$PLUGINBEFOREID)" | tee -a "$LOG"
     PLUGINIDS=$(xfconf-query -c xfce4-panel -l -v | grep plugin-ids | awk '{print $1}')
-    IDS=$(xfconf-query -c xfce4-panel -p $PLUGINIDS | grep -oP '[0-9]+')
+    IDS=$(xfconf-query -c xfce4-panel -p $PLUGINIDS | grep -oP '^[0-9]+$')
     echo "Current plugin order: $(echo $IDS | tr '\r\n' ' ')" | tee -a "$LOG"
     NRIDS=$(echo "$IDS" | wc -l)
     for ID in $IDS; do
