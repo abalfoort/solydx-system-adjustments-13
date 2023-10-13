@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.1.9) stable; urgency=low
+
+  * Rebuild panel because of shifting panel items
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Fri, 13 Oct 2023 13:18:37 +0200
+
 solydx-system-adjustments-13 (1.1.8) stable; urgency=low
 
   * Fix /usr/bin/xfce4-panel-plugins invalid ids listing
