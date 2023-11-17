@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.2.0) stable; urgency=low
+
+  * Larger Grub font size
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Thu, 16 Nov 2023 12:28:27 +0100
+
 solydx-system-adjustments-13 (1.1.9) stable; urgency=low
 
   * Rebuild panel because of shifting panel items
