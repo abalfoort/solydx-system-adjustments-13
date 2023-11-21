@@ -666,7 +666,7 @@
     <description xml:lang="it">Rimuove permanentemente i metadati PDF</description>
     <description xml:lang="nl">PDF-metadata permanent verwijderen</description>
     <description xml:lang="pt">Remover permanentemente os metadados do PDF</description>
-    <description xml:lang="ru">Постоянное удаление метаданных PDF</description>
+    <description xml:lang="ru">Необратимое удаление метаданных PDF</description>
     <description xml:lang="sv">Ta bort PDF-metadata</description>
     <patterns>*.pdf</patterns>
     <other-files/>
