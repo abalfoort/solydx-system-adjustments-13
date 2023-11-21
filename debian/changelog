@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.2.1) stable; urgency=low
+
+  * Updated translation: ru
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Tue, 21 Nov 2023 10:09:10 +0100
+
 solydx-system-adjustments-13 (1.2.0) stable; urgency=low
 
   * Larger Grub font size
