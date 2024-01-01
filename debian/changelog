@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.2.2) stable; urgency=low
+
+  * Add heif file assosiation for Ristretto
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 01 Jan 2024 13:07:15 +0100
+
 solydx-system-adjustments-13 (1.2.1) stable; urgency=low
 
   * Updated translation: ru
