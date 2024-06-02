@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.2.3) stable; urgency=low
+
+  * Add hardinfo2 config
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Sun, 02 Jun 2024 11:26:52 +0200
+
 solydx-system-adjustments-13 (1.2.2) stable; urgency=low
 
   * Add heif file assosiation for Ristretto
