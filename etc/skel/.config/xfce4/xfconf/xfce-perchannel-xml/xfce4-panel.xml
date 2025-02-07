@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-panel" version="1.0">
   <property name="panels" type="array">
@@ -24,10 +24,25 @@
         <value type="int" value="24"/>
       </property>
       <property name="icon-size" type="uint" value="0"/>
+      <property name="border-width" type="uint" value="2"/>
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-12" type="string" value="whiskermenu"/>
+    <property name="plugin-12" type="string" value="whiskermenu">
+      <property name="button-icon" type="string" value="solydx"/>
+      <property name="favorites-in-recent" type="bool" value="true"/>
+      <property name="favorites" type="array">
+        <value type="string" value="firefox-esr.desktop"/>
+        <value type="string" value="thunderbird.desktop"/>
+        <value type="string" value="libreoffice-startcenter.desktop"/>
+        <value type="string" value="synaptic.desktop"/>
+        <value type="string" value="xfce-settings-manager.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+      </property>
+      <property name="recent" type="array">
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+      </property>
+    </property>
     <property name="plugin-14" type="string" value="separator"/>
     <property name="plugin-15" type="string" value="showdesktop"/>
     <property name="plugin-16" type="string" value="launcher">
