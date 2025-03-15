@@ -1,3 +1,10 @@
+solydx-system-adjustments-13 (1.2.6) stable; urgency=low
+
+  * Font size +1
+  * Larger panel
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Wed, 12 Mar 2025 12:39:08 +0100
+
 solydx-system-adjustments-13 (1.2.5) stable; urgency=low
 
   * Add border to panel
