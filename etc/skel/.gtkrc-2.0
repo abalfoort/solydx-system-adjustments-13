@@ -6,7 +6,7 @@ style "xfdesktop-icon-view" {
     fg[ACTIVE] = "#000000"
 }
 widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
-gtk-font-name=Clear Sans Regular 11
+gtk-font-name=Clear Sans Regular 12
 gtk-theme-name=Breeze-X
 gtk-icon-theme-name=evolvere-2
 gtk-fallback-icon-theme=gnome
