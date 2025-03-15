@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.2.7) stable; urgency=low
+
+  * Whisker menu: switch categories while hovering
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Sat, 15 Mar 2025 12:16:21 +0100
+
 solydx-system-adjustments-13 (1.2.6) stable; urgency=low
 
   * Font size +1
