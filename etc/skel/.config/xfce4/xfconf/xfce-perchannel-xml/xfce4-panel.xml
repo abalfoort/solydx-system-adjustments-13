@@ -5,7 +5,7 @@
     <value type="int" value="0"/>
     <property name="panel-0" type="empty">
       <property name="position" type="string" value="p=8;x=960;y=923"/>
-      <property name="size" type="uint" value="40"/>
+      <property name="size" type="uint" value="46"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="length" type="double" value="100"/>
       <property name="enter-opacity" type="uint" value="85"/>
@@ -24,7 +24,8 @@
         <value type="int" value="24"/>
       </property>
       <property name="icon-size" type="uint" value="0"/>
-      <property name="border-width" type="uint" value="2"/>
+      <property name="border-width" type="uint" value="4"/>
+      <property name="nrows" type="uint" value="1"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -41,7 +42,13 @@
       </property>
       <property name="recent" type="array">
         <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="xfce-display-settings.desktop"/>
       </property>
+      <property name="launcher-icon-size" type="int" value="3"/>
+      <property name="category-icon-size" type="int" value="1"/>
+      <property name="menu-height" type="int" value="550"/>
+      <property name="show-command-menueditor" type="bool" value="false"/>
+      <property name="show-command-profile" type="bool" value="false"/>
     </property>
     <property name="plugin-14" type="string" value="separator"/>
     <property name="plugin-15" type="string" value="showdesktop"/>
@@ -61,17 +68,19 @@
     <property name="plugin-23" type="string" value="separator"/>
     <property name="plugin-24" type="string" value="clock">
       <property name="digital-layout" type="uint" value="3"/>
-      <property name="digital-time-font" type="string" value="Sans 12"/>
+      <property name="digital-time-font" type="string" value="Sans 16"/>
     </property>
     <property name="plugin-1" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="package update indicator"/>
+        <value type="string" value="ethernet network connection \u201cwired connection 1\u201d active"/>
         <value type="string" value="networkmanager applet"/>
       </property>
       <property name="known-items" type="array">
         <value type="string" value="firewall-applet"/>
         <value type="string" value="org.guido-berhoerster.code.package-update-indicator"/>
       </property>
-      <property name="icon-size" type="int" value="24"/>
+      <property name="icon-size" type="int" value="0"/>
       <property name="square-icons" type="bool" value="false"/>
       <property name="hide-new-items" type="bool" value="false"/>
       <property name="single-row" type="bool" value="false"/>
