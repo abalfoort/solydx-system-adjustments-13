@@ -1,0 +1,68 @@
+#!/bin/bash
+#
+# https://gist.github.com/IngoMeyer441/84cf1e40fa756a9c3e6c8d9e38ee9b6f
+#
+# SPDX-License-Identifier: MIT
+# Steps:
+# 1) Make sure bash is available
+# 2) Create udev rule
+# - path to new udev rule: /etc/udev/rules.d/50-libvirt-x-resize.rules
+# - udev rule content: 
+# ACTION=="change", KERNEL=="card[0-9]*", SUBSYSTEM=="drm", RUN+="/usr/bin/libvirt-x-resize" 
+# 4) Create script /usr/bin/libvirt-x-resize (this file) and make executable
+# 5) Reload udev rules with `sudo udevadm control --reload-rules`
+# 6) Make sure auto-resize is enabled in virt-viewer/spicy
+# 7) Make sure qemu-guest-agent spice-vdagent xserver-xspice xserver-xorg-video-qxl  are installed
+# 8) Make sure spice-vdagentd is loaded and running fine
+# Debugging:
+# - Watch udev events on resize with `udevadm monitor`
+# - Watch dmesg (may not be super useful) with `dmesg -w`
+# - Watch autores logs with `tail -f /var/log/autores/autores.log`
+# Credits:
+# - Credit for Finding Sessions as Root: https://unix.stackexchange.com/questions/117083/how-to-get-the-list-of-all-active-x-sessions-and-owners-of-them
+# - Credit for Resizing via udev: https://superuser.com/questions/1183834/no-auto-resize-with-spice-and-virt-manager
+
+## Only run as root user
+if [ "${EUID}" -ne 0 ]; then
+    >&2 echo "Please run as root."
+    exit 1
+fi
+
+## Ensure Log Directory Exists
+LOG_DIR=/var/log;
+if [ ! -d $LOG_DIR ]; then
+    mkdir $LOG_DIR;
+fi
+LOG_FILE=${LOG_DIR}/libvirt-x-resize.log
+
+## Function to find User Sessions & Resize their display
+function x_resize() {
+    declare -A disps usrs
+    usrs=()
+    disps=()
+
+    users=$(getent passwd {1000..60000} | cut -d':' -f 1)
+    for i in $users;do
+        [[ $i = root ]] && continue # skip root
+        usrs[$i]=1
+    done
+
+    for u in "${!usrs[@]}"; do
+        for i in $(ps e -u "$u" | sed -rn 's/.* DISPLAY=(:[0-9]*).*/\1/p');do
+            disps[$i]=$u
+        done
+    done
+
+    for d in "${!disps[@]}";do
+	    session_user="${disps[$d]}"
+	    session_display="$d"
+	    session_output=$(su - "$session_user" -c "PATH=/usr/bin DISPLAY="$session_display" xrandr | awk '/ connected/{print \$1; exit; }'")
+	    echo "Session User: $session_user" | tee -a $LOG_FILE;
+	    echo "Session Display: $session_display" | tee -a $LOG_FILE;
+	    echo "Session Output: $session_output" | tee -a $LOG_FILE;
+	    su - "$session_user" -c "PATH=/usr/bin DISPLAY="$session_display" xrandr --output "$session_output" --auto" | tee -a $LOG_FILE;
+    done
+}
+
+echo "Resize Event: $(date)" | tee $LOG_FILE
+x_resize 
