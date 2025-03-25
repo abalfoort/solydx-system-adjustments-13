@@ -40,15 +40,18 @@
         <value type="string" value="xfce-settings-manager.desktop"/>
         <value type="string" value="xfce4-terminal-emulator.desktop"/>
       </property>
-      <property name="recent" type="array">
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
-        <value type="string" value="xfce-display-settings.desktop"/>
-      </property>
-      <property name="launcher-icon-size" type="int" value="3"/>
+      <property name="launcher-icon-size" type="int" value="2"/>
       <property name="category-icon-size" type="int" value="1"/>
-      <property name="menu-height" type="int" value="550"/>
-      <property name="show-command-menueditor" type="bool" value="false"/>
-      <property name="show-command-profile" type="bool" value="false"/>
+      <property name="menu-height" type="int" value="500"/>
+      <property name="show-command-menueditor" type="bool" value="true"/>
+      <property name="show-command-profile" type="bool" value="true"/>
+      <property name="hover-switch-category" type="bool" value="true"/>
+      <property name="position-categories-alternate" type="bool" value="true"/>
+      <property name="position-search-alternate" type="bool" value="true"/>
+      <property name="position-commands-alternate" type="bool" value="true"/>
+      <property name="position-profile-alternate" type="bool" value="false"/>
+      <property name="recent" type="array">
+      </property>
     </property>
     <property name="plugin-14" type="string" value="separator"/>
     <property name="plugin-15" type="string" value="showdesktop"/>
