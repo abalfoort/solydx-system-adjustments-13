@@ -1,3 +1,21 @@
+solydx-system-adjustments-13 (1.3.0) stable; urgency=low
+
+  * Fix Whisker menu layout not changed
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Tue, 25 Mar 2025 12:54:21 +0100
+
+solydx-system-adjustments-13 (1.2.9) stable; urgency=low
+
+  * Change layout of Whisker menu
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 24 Mar 2025 11:23:13 +0100
+
+solydx-system-adjustments-13 (1.2.8) stable; urgency=low
+
+  * Add libvirt resizing for Xfce
+
+ -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Fri, 21 Mar 2025 09:02:03 +0100
+
 solydx-system-adjustments-13 (1.2.7) stable; urgency=low
 
   * Whisker menu: switch categories while hovering
