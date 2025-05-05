@@ -1,190 +1,197 @@
+solydx-system-adjustments-13 (1.3.1) stable; urgency=low
+
+  * Add alternatives configuration
+  * Change dev e-mail address
+
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Sat, 03 May 2025 14:33:05 +0200
+
 solydx-system-adjustments-13 (1.3.0) stable; urgency=low
 
   * Fix Whisker menu layout not changed
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Tue, 25 Mar 2025 12:54:21 +0100
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Tue, 25 Mar 2025 12:54:21 +0100
 
 solydx-system-adjustments-13 (1.2.9) stable; urgency=low
 
   * Change layout of Whisker menu
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 24 Mar 2025 11:23:13 +0100
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Mon, 24 Mar 2025 11:23:13 +0100
 
 solydx-system-adjustments-13 (1.2.8) stable; urgency=low
 
   * Add libvirt resizing for Xfce
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Fri, 21 Mar 2025 09:02:03 +0100
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Fri, 21 Mar 2025 09:02:03 +0100
 
 solydx-system-adjustments-13 (1.2.7) stable; urgency=low
 
   * Whisker menu: switch categories while hovering
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Sat, 15 Mar 2025 12:16:21 +0100
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Sat, 15 Mar 2025 12:16:21 +0100
 
 solydx-system-adjustments-13 (1.2.6) stable; urgency=low
 
   * Font size +1
   * Larger panel
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Wed, 12 Mar 2025 12:39:08 +0100
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Wed, 12 Mar 2025 12:39:08 +0100
 
 solydx-system-adjustments-13 (1.2.5) stable; urgency=low
 
   * Add border to panel
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Tue, 04 Feb 2025 22:27:57 +0100
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Tue, 04 Feb 2025 22:27:57 +0100
 
 solydx-system-adjustments-13 (1.2.4) stable; urgency=low
 
   * Move terminal settings to xfconf
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 27 Jan 2025 10:27:08 +0100
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Mon, 27 Jan 2025 10:27:08 +0100
 
 solydx-system-adjustments-13 (1.2.3) stable; urgency=low
 
   * Add hardinfo2 config
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Sun, 02 Jun 2024 11:26:52 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Sun, 02 Jun 2024 11:26:52 +0200
 
 solydx-system-adjustments-13 (1.2.2) stable; urgency=low
 
   * Add heif file assosiation for Ristretto
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 01 Jan 2024 13:07:15 +0100
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Mon, 01 Jan 2024 13:07:15 +0100
 
 solydx-system-adjustments-13 (1.2.1) stable; urgency=low
 
   * Updated translation: ru
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Tue, 21 Nov 2023 10:09:10 +0100
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Tue, 21 Nov 2023 10:09:10 +0100
 
 solydx-system-adjustments-13 (1.2.0) stable; urgency=low
 
   * Larger Grub font size
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Thu, 16 Nov 2023 12:28:27 +0100
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Thu, 16 Nov 2023 12:28:27 +0100
 
 solydx-system-adjustments-13 (1.1.9) stable; urgency=low
 
   * Rebuild panel because of shifting panel items
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Fri, 13 Oct 2023 13:18:37 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Fri, 13 Oct 2023 13:18:37 +0200
 
 solydx-system-adjustments-13 (1.1.8) stable; urgency=low
 
   * Fix /usr/bin/xfce4-panel-plugins invalid ids listing
   * Change light Grub theme font colors
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Thu, 12 Oct 2023 08:36:46 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Thu, 12 Oct 2023 08:36:46 +0200
 
 solydx-system-adjustments-13 (1.1.7) stable; urgency=low
 
   * Add clipman to the default panel
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Fri, 08 Sep 2023 14:21:21 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Fri, 08 Sep 2023 14:21:21 +0200
 
 solydx-system-adjustments-13 (1.1.6) stable; urgency=low
 
   * Plymouth theme smaller password character (bullet.png)
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 21 Aug 2023 12:03:52 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Mon, 21 Aug 2023 12:03:52 +0200
 
 solydx-system-adjustments-13 (1.1.5) stable; urgency=low
 
   * Move postinst code to iso-constructor
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Sat, 22 Jul 2023 14:35:54 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Sat, 22 Jul 2023 14:35:54 +0200
 
 solydx-system-adjustments-13 (1.1.4) stable; urgency=low
 
   * Plymouth logo not transparent
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Wed, 19 Jul 2023 18:16:40 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Wed, 19 Jul 2023 18:16:40 +0200
 
 solydx-system-adjustments-13 (1.1.3) stable; urgency=low
 
   * Fix Plymouth light theme: background logo wrong format
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 17 Jul 2023 14:31:03 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Mon, 17 Jul 2023 14:31:03 +0200
 
 solydx-system-adjustments-13 (1.1.2) stable; urgency=low
 
   * Change Plymouth bullet image to black
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 17 Jul 2023 10:51:37 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Mon, 17 Jul 2023 10:51:37 +0200
 
 solydx-system-adjustments-13 (1.1.1) stable; urgency=low
 
   * Fix postrm
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Sun, 16 Jul 2023 17:24:56 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Sun, 16 Jul 2023 17:24:56 +0200
 
 solydx-system-adjustments-13 (1.1.0) stable; urgency=low
 
   * Updated graphics
   * Added black theme
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 03 Jul 2023 09:44:54 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Mon, 03 Jul 2023 09:44:54 +0200
 
 solydx-system-adjustments-13 (1.0.9) stable; urgency=low
 
   * Replace desktop-grub.png with a generic black image
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Thu, 29 Jun 2023 08:20:31 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Thu, 29 Jun 2023 08:20:31 +0200
 
 solydx-system-adjustments-13 (1.0.8) stable; urgency=low
 
   * Adjusted grub theme colors
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Wed, 28 Jun 2023 10:22:32 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Wed, 28 Jun 2023 10:22:32 +0200
 
 solydx-system-adjustments-13 (1.0.7) stable; urgency=low
 
   * Add Grub SolydK light theme (default)
     Check /etc/default/grub for configuration
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Thu, 22 Jun 2023 17:30:43 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Thu, 22 Jun 2023 17:30:43 +0200
 
 solydx-system-adjustments-13 (1.0.6) stable; urgency=low
 
   * Updated uca.xml
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Wed, 21 Jun 2023 09:43:47 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Wed, 21 Jun 2023 09:43:47 +0200
 
 solydx-system-adjustments-13 (1.0.5) stable; urgency=low
 
   * Some minor adjustments to Thunar actions
   * Added recommends for Thunar actions
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Tue, 20 Jun 2023 09:07:41 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Tue, 20 Jun 2023 09:07:41 +0200
 
 solydx-system-adjustments-13 (1.0.4) stable; urgency=low
 
   * Fix Thunar actions order
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 19 Jun 2023 17:13:54 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Mon, 19 Jun 2023 17:13:54 +0200
 
 solydx-system-adjustments-13 (1.0.3) stable; urgency=low
 
   * Added Thunar actions
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 19 Jun 2023 12:49:37 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Mon, 19 Jun 2023 12:49:37 +0200
 
 solydx-system-adjustments-13 (1.0.2) stable; urgency=low
 
   * Adjust panel clock settings
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Mon, 12 Jun 2023 10:43:56 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Mon, 12 Jun 2023 10:43:56 +0200
 
 solydx-system-adjustments-13 (1.0.1) stable; urgency=low
 
   * Adjusted info file
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Sun, 11 Jun 2023 13:40:39 +0200
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Sun, 11 Jun 2023 13:40:39 +0200
 
 solydx-system-adjustments-13 (1.0.0) stable; urgency=low
 
   * Initial version 1.0.0
 
- -- Arjen Balfoort <arjenbalfoort@hotmail.com>  Fri, 09 Jun 2023 15:48:00 +0100
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Fri, 09 Jun 2023 15:48:00 +0100
