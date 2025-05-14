@@ -19,3 +19,5 @@
 /usr/share/desktop-base/solydx-black-theme/wallpaper /usr/share/wallpapers/solydx-black
 /usr/share/desktop-base/solydx-dark-theme/wallpaper /usr/share/wallpapers/solydx-dark
 /usr/share/desktop-base/solydx-light-theme/wallpaper /usr/share/wallpapers/solydx-light
+/usr/share/solydxk/artwork/solydx.svg /usr/share/icons/hicolor/scalable/apps/solydx.svg
+/usr/share/solydxk/artwork/solydx-black.svg /usr/share/icons/hicolor/scalable/apps/solydx-black.svg
