@@ -51,6 +51,8 @@
       <property name="position-commands-alternate" type="bool" value="true"/>
       <property name="position-profile-alternate" type="bool" value="false"/>
       <property name="recent" type="array">
+        <value type="string" value="xfce-settings-manager.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
       </property>
     </property>
     <property name="plugin-14" type="string" value="separator"/>
