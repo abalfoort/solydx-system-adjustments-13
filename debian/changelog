@@ -1,3 +1,9 @@
+solydx-system-adjustments-13 (1.3.4) stable; urgency=low
+
+  * Add display port settings
+
+ -- Arjen Balfoort <solydxk.abalfoort@tuta.com>  Wed, 21 May 2025 11:33:48 +0200
+
 solydx-system-adjustments-13 (1.3.3) stable; urgency=low
 
   * Fix background image configuration
