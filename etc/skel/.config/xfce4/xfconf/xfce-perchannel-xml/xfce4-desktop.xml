@@ -135,6 +135,62 @@
           <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
         </property>
       </property>
+      <property name="monitorDP-1" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace1" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace2" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace3" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+      </property>
+      <property name="monitorDP-2" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace1" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace2" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace3" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+      </property>
+      <property name="monitorDP-3" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace1" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace2" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace3" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+      </property>
+      <property name="monitorDP-4" type="empty">
+        <property name="workspace0" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace1" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace2" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+        <property name="workspace3" type="empty">
+          <property name="last-image" type="string" value="/usr/share/xfce4/backdrops/solydx-light-1920x1080.svg"/>
+        </property>
+      </property>
     </property>
   </property>
   <property name="desktop-icons" type="empty">
